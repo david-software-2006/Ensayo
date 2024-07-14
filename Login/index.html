@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Recursos/Imagenes/favicon.webp" type="image/x-icon">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/Login/style.css">
+    <link rel="stylesheet" href="/Login/login.css">
+    <link rel="stylesheet" href="/Login/recuperar.css">
+    <script src="/Login/guardar.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="regir">
+            <h1>Iniciar Sesión</h1>
+            <img src="/Recursos/Imagenes/img1.png" alt="Foto">
+            <button type="button"><a href="/Registro/index.html">Registrarse</a></button>
+        </div>
+        <div class="form-group">
+            <img class="img2" src="/Recursos/Imagenes/logo.png" alt="Foto">
+            <form onsubmit="event.preventDefault(); saveData();">
+                <div class="input-icon">
+                    <img src="/Recursos/Imagenes/icon.png" alt="icono" class="icon">
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    <img src="/Recursos/Imagenes/icon.png" alt="icono" class="iconD">
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required><br>
+                    <button class="boton" type="submit"> <a href="/libros/libro.html"> Iniciar Sesión </a></button>
+                    <a href="/Login/recuperarcontraseña.html" class="forgot-password">Recuperar contraseña</a>
+                    <h3 class="or-separator">o</h3>
+                    <img src="/Recursos/Imagenes/google.png" alt="icono" class="icono"> <button class="buton" type="button">Google</button>
+                    <img src="/Recursos/Imagenes/facebook.png" alt="icono" class="icono1"><button class="buton" type="button">Facebook</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- celular -->
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo-container">
+                <img src="/Recursos/Imagenes/logo1.webp" alt="Logo" class="logo">
+                <h2>LOGIN</h2>
+            </div>
+        </div>
+        <div class="login-avatar">
+            <img src="/Recursos/Imagenes/login.png" alt="Avatar">
+        </div>
+        <form class="login-form">
+            <div class="input-container">
+                <img src="/Recursos/Imagenes/logo2.jpg" alt="Email Icon" class="icon">
+                <input type="email" placeholder="ejemplo@gmail.com" required>
+            </div>
+            <div class="input-container">
+                <img src="/Recursos/Imagenes/logo3.png" alt="Lock Icon" class="icon">
+                <input type="password" placeholder="********" required>
+            </div>
+            <button type="submit" class="login-button"><a href="/Libros/libro.html">Leer</a></button>
+        </form>
+        <div class="login-footer">
+            <span class="or-separator">or</span>
+            <a href="/Register/index.html">Crear una cuenta</a>
+            <br>
+            <a href="/Login/recuperarcontraseña.html" class="recover-password">Recuperar contraseña</a>
+        </div>
+    </div>
+</body>
+
+</html>

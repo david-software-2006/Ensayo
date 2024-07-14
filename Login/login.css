@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    background: linear-gradient(to bottom, #5F8DB5, #4285F4);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%; 
+    max-width: 20rem;
+}
+
+.login-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 25%; 
+    height: auto;
+}
+
+.login-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.login-avatar img {
+    width: 60%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.login-form .input-container {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    width: 90%; 
+}
+
+.login-form .icon {
+    width: 1.5rem;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+.login-form input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.login-button {
+    background-color: #FA4616;
+    color: white;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%; 
+    max-width: 10rem;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #e03d14;
+}
+
+.login-footer {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+}
+
+.login-footer span {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.or-separator {
+    margin: 1rem 0;
+    position: relative;
+    text-align: center;
+}
+
+.or-separator::before, .or-separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%; 
+    height: 1px;
+    background-color: black;
+}
+
+.or-separator::before {
+    left: 0;
+}
+
+.or-separator::after {
+    right: 0;
+}
+
+.login-footer a {
+    color: rgb(2, 2, 2);
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+.recover-password {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #4285F4;
+    text-decoration: none;
+}
+
+.recover-password:hover {
+    text-decoration: underline;
+}

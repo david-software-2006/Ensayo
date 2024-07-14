@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor de PDF</title>
+    <link rel="stylesheet" href="visor.css">
+</head>
+
+<body>
+
+    <div class="pdf-container">
+        <div class="pdf-viewer"></div>
+    </div>
+
+    <div class="progress-bar" style="width: 0%;">0% leído</div>
+
+    <button class="menu-button" id="left-menu-button">&#9776;</button>
+
+    <div class="left-menu" id="left-menu">
+        <button class="close-button" id="close-left-menu">&times;</button>
+    
+        <ul>
+            <li><iframe  class="audio" src='https://widget.spreaker.com/player?episode_id=60214765&theme=dark&chapters-image=true'
+                  width='80%' height='95px' frameborder='0'></iframe><br></li>
+                  <li><button class="boton-download" id="download-btn"><img class="img" src="/Recursos/Imagenes/descarga.png" alt="icono"> <br>
+                    Descargar Pdf  </button>
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="visor.js"></script>
+</body>
+
+</html>
