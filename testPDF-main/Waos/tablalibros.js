@@ -1,6 +1,6 @@
 const url = '/PDFs/'; // Ruta de la carpeta que contiene los archivos PDF.
     const conCategoría = [
-      ['1', 'CON LOS PELOS DE PUNTA', 'Historia', 'ejemplo', '/Recursos/PDFs/CON-LOS-PELOS-DE-PUNTA.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2023/12/Portada-Con-los-pelos-de-punta.webp'],
+      ['1', 'CON LOS PELOS DE PUNTA', 'Historia', '', 'CON-LOS-PELOS-DE-PUNTA.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2023/12/Portada-Con-los-pelos-de-punta.webp'],
       ['2', 'ERASE UNA VEZ EN COLOMBIA', 'Juegos', '', 'ERASE-UNA-VEZ-EN-COLOMBIA.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/Portada-Erase-una-vez-en-colombia.webp'],
       ['3', 'TODO LO CONTRARIO', 'Adultos', '', 'TODO-LO-CONTRARIO.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/PORTADA-CONTRARIOS.webp'],
       ['4', 'Cuentos para desenredar enredos', 'Adultos', '', 'cuentos-para-desenredar-enredos.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/PORTADA-ENREDOS.webp'],
@@ -67,6 +67,5 @@ const url = '/PDFs/'; // Ruta de la carpeta que contiene los archivos PDF.
       
       table.innerHTML = thead + tbody;
     };
-
 
     generateTable();
