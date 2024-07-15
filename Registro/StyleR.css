@@ -9,21 +9,19 @@ body {
     font-family: Arial, sans-serif;
 }
 
-<<<<<<< HEAD
-=======
 body.dark {
     background-color: #2e2e2e;
     color: #ffffff;
-  }
-   
-  body.dark .container {
+}
+
+body.dark .container {
     background-color: #444444;
-  }
-   
-  .toggle {
+}
+
+.toggle {
     display: none;
-  }
->>>>>>> 61609b4349894886708ec4f74835274ade301bf8
+}
+
 .login-container {
     position: relative;
     background: linear-gradient(to bottom, #5F8DB5, #4285F4);
@@ -46,21 +44,22 @@ body.dark {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 40px; /* Espacio entre el logo y el título */
+    gap: 40px;
+    /* Espacio entre el logo y el título */
 }
 
 .logo {
-    width: 70px; 
+    width: 70px;
     height: auto;
 }
 
 .login-title {
     margin: 0;
-    font-size: 24px; 
+    font-size: 24px;
 }
 
 .login-avatar img {
-    width: 200px; 
+    width: 200px;
     height: auto;
     margin-bottom: 20px;
 }
@@ -113,13 +112,14 @@ body.dark {
     margin-bottom: 10px;
 }
 
-.or-separator{
+.or-separator {
     margin: 20px 0;
     position: relative;
     text-align: center;
 }
 
-.or-separator::before, .or-separator::after{
+.or-separator::before,
+.or-separator::after {
     content: '';
     position: absolute;
     top: 65%;
@@ -128,11 +128,11 @@ body.dark {
     background-color: black;
 }
 
-.or-separator::before{
+.or-separator::before {
     left: 0;
 }
 
-.or-separator::after{
+.or-separator::after {
     right: 0;
 }
 
@@ -162,9 +162,9 @@ select {
     width: 270px;
     border: none;
     color: #747171;
-  }
-  
-  
+}
+
+
 /*google y facebook*/
 
 .or {
@@ -173,17 +173,16 @@ select {
     border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
-  }
+}
 
 
-  .or {
+.or {
     /* Estilo inicial del elemento */
     transition: transform 0.3s ease;
-  }
-  
-  .or:hover {
-    /* Estilo cuando el cursor está encima */
-    transform: scale(1.1); /* Aumenta el tamaño del elemento en un 10% */
-  }
-  
+}
 
+.or:hover {
+    /* Estilo cuando el cursor está encima */
+    transform: scale(1.1);
+    /* Aumenta el tamaño del elemento en un 10% */
+}

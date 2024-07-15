@@ -10,38 +10,41 @@ body {
 .pdf-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ocupa toda la altura visible del viewport */
-    overflow: hidden; /* Evita el desplazamiento lateral */
+    height: 100vh;
+    /* Ocupa toda la altura visible del viewport */
+    overflow: hidden;
+    /* Evita el desplazamiento lateral */
 }
 
-<<<<<<< HEAD
-=======
 body.dark {
     background-color: #2e2e2e;
     color: #ffffff;
-  }
-   
-  body.dark .container {
-    background-color: #444444;
-  }
-   
-  .toggle {
-    display: none;
-  }
+}
 
->>>>>>> 61609b4349894886708ec4f74835274ade301bf8
+body.dark .container {
+    background-color: #444444;
+}
+
+.toggle {
+    display: none;
+}
+
+
 .pdf-viewer {
     width: 100%;
     height: 100%;
-    overflow-y: scroll; /* Permitir el desplazamiento vertical */
-    -webkit-overflow-scrolling: touch; /* Scroll suave en dispositivos iOS */
+    overflow-y: scroll;
+    /* Permitir el desplazamiento vertical */
+    -webkit-overflow-scrolling: touch;
+    /* Scroll suave en dispositivos iOS */
     text-align: center;
 }
 
 .pdf-viewer canvas {
     display: block;
     margin: 0 auto;
-    max-width: 100%; /* Para asegurar que las páginas no se desborden */
+    max-width: 100%;
+    /* Para asegurar que las páginas no se desborden */
 }
 
 .progress-bar {
@@ -59,7 +62,8 @@ body.dark {
 
 /* Estilos para los menús laterales */
 
-.left-menu, .right-menu {
+.left-menu,
+.right-menu {
     position: fixed;
     top: 0;
     width: 250px;
@@ -72,7 +76,8 @@ body.dark {
     transition: transform 0.3s ease-out;
 }
 
-.left-menu.active, .right-menu.active {
+.left-menu.active,
+.right-menu.active {
     transform: translateX(0);
 }
 
@@ -132,17 +137,22 @@ a:hover {
 /* Media query para pantallas pequeñas */
 
 @media only screen and (max-width: 600px) {
-    .left-menu, .right-menu {
-        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+
+    .left-menu,
+    .right-menu {
+        width: 100%;
+        /* Ocupa todo el ancho en pantallas pequeñas */
         transform: translateX(-100%);
     }
 
     .pdf-viewer {
-        height: 100vh; /* Ajusta la altura para ocupar toda la pantalla en dispositivos pequeños */
+        height: 100vh;
+        /* Ajusta la altura para ocupar toda la pantalla en dispositivos pequeños */
     }
 
     .menu-button {
-        z-index: 1001; /* Asegura que los botones del menú estén sobre el visor de PDF */
+        z-index: 1001;
+        /* Asegura que los botones del menú estén sobre el visor de PDF */
     }
 
     .close-button {
@@ -152,25 +162,25 @@ a:hover {
     }
 }
 
-.boton-download{
-        border: none;
-        background-color: transparent;
-        align-content: center;
-        padding-left: 50px;
-        color: rgb(255, 255, 255);
-        font-size: 18px;
-        
+.boton-download {
+    border: none;
+    background-color: transparent;
+    align-content: center;
+    padding-left: 50px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+
 }
 
-.boton-download:hover{
+.boton-download:hover {
     color: #a5a5a5;
 }
-.img{
+
+.img {
     width: 120px;
 }
 
-iframe{
+iframe {
     margin-top: 50px;
     padding-left: 10px;
 }
-

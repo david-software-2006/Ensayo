@@ -1,22 +1,17 @@
  // Define la ruta base de la carpeta que contiene los archivos PDF
- let url = '/Recursos/Pdfs/';
+ let url = '/Recursos/PDFs/';
 
  // Categorías y libros iniciales
  const conCategoría = [
      // CUENTO
-     ['1', 'Entre cuento y cuento', 'CUENTO', 'URL-Spreaker', '/Recursos/Pdfs/ENTRE-CUENTO-Y-CUENTO.pdf', 'URL-video', '/Recursos/imagenes/libro9.webp'],
-    //  ['2', 'Cuentos para desenredar enredos', 'CUENTO', 'URL-Spreaker', 'cuentos-para-desenredar-enredos.pdf', 'URL-video', '/Recursos/imagenes/libro7.webp'],
-     ['3', 'Cuentos maravillosos', 'CUENTO', 'URL-Spreaker', '/Recursos/Pdfs/Cuentos-Maravillosos-4ta-Edicion.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
-     ['4', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/Pdfs/cuentos-para-contar.pdf', 'URL-video', '/Recursos/imagenes/libro10.webp'],
+     ['1', 'Entre cuento y cuento', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/ENTRE-CUENTO-Y-CUENTO.pdf', 'URL-video', '/Recursos/imagenes/libro9.webp'],
+     ['3', 'Cuentos maravillosos', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/Cuentos-Maravillosos-4ta-Edicion.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
+     ['4', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/cuentos-para-contar.pdf', 'URL-video', '/Recursos/imagenes/libro10.webp'],
 
      //NIÑOS
-     ['5', 'A que te cojo ratón', 'NIÑOS', 'URL-Spreaker', '/Recursos/Pdfs/A-QUE-TE-COJO-RATON.pdf', 'URL-video', '/Recursos/imagenes/libro16.webp'],
-<<<<<<< HEAD
-     ['6', 'Cuentos y pasatiempos', 'NIÑOS', 'URL-Spreaker', '/Recursos/Pdfs/Cuentos-y-pasatiempos.pdf', 'URL-video', '/Recursos/imagenes/libro25.webp'],
-=======
-     ['6', 'Cuentos y pasatiempos', 'NIÑOS', 'https:widget.spreaker.com/player?show_id=4421091&theme=light&playlist=show&playlist-continuous=true&chapters-image=true', '/Recursos/Pdfs/Cuentos-y-pasatiempos.pdf', 'URL-video', '/Recursos/imagenes/libro25.webp'],
->>>>>>> 61609b4349894886708ec4f74835274ade301bf8
-     ['7', 'Cuentos y maravillosos', 'NIÑOS', 'URL-Spreaker', '/Recursos/Pdfs/Cuentos-Maravillosos-4ta-Edicion.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
+     ['5', 'A que te cojo ratón', 'NIÑOS', 'URL-Spreaker', '/Recursos/PDFs/A-QUE-TE-COJO-RATON.pdf', 'URL-video', '/Recursos/imagenes/libro16.webp'],
+     ['6', 'Cuentos y pasatiempos', 'NIÑOS', 'https:widget.spreaker.com/player?show_id=4421091&theme=light&playlist=show&playlist-continuous=true&chapters-image=true', '/Recursos/PDFs/Cuentos-y-pasatiempos.pdf', 'URL-video', '/Recursos/imagenes/libro25.webp'],
+     ['7', 'Cuentos y maravillosos', 'NIÑOS', 'URL-Spreaker', '/Recursos/PDFs/Cuentos-Maravillosos-4ta-Edicion.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
 
      //
  ];

@@ -1,4 +1,4 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -10,33 +10,32 @@ body{
 }
 
 /* Estilos del contenedor */
-body, .container {
+body,
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-<<<<<<< HEAD
-=======
+
 body.dark {
     background-color: #2e2e2e;
     color: #ffffff;
-  }
-   
-  body.dark .container {
-    background-color: #444444;
-  }
-   
-  .toggle {
-    display: none;
-  }
+}
 
->>>>>>> 61609b4349894886708ec4f74835274ade301bf8
+body.dark .container {
+    background-color: #444444;
+}
+
+.toggle {
+    display: none;
+}
+
 /* Personaliza los colores del fondo */
 .container {
     width: 100%;
-   background-color: white;
+    background-color: white;
 }
 
 /* Estilos del cuadro de contraseña olvidada */
@@ -45,14 +44,15 @@ body.dark {
 }
 
 .bg-card {
-    background-color:#fa4616;
+    background-color: #fa4616;
     justify-content: center;
-    
+
 }
 
 
 .text-card-foreground {
-    color: #000; /* Personaliza el color del texto del cuadro */
+    color: #000;
+    /* Personaliza el color del texto del cuadro */
 }
 
 .shadow-sm {
@@ -90,7 +90,8 @@ body.dark {
 }
 
 .text-muted-foreground {
-    color: #000000; /* Personaliza el color del texto desvanecido */
+    color: #000000;
+    /* Personaliza el color del texto desvanecido */
     text-align: center;
 }
 
@@ -104,26 +105,30 @@ body.dark {
 
 /* Personaliza los colores de los botones */
 .bg-primary {
-    background-color: #002748; /* Personaliza el color de fondo del botón */
+    background-color: #002748;
+    /* Personaliza el color de fondo del botón */
     border-radius: 8px;
 }
 
 .text-primary-foreground {
-    color: #ffffff; /* Personaliza el color del texto del botón */
+    color: #ffffff;
+    /* Personaliza el color del texto del botón */
 }
 
 /* Estilos del campo de entrada */
 .input-field {
-    border: 1px solid #e2e8f0; /* Personaliza el color del borde */
+    border: 1px solid #e2e8f0;
+    /* Personaliza el color del borde */
 }
 
 .placeholder-text-muted-foreground::placeholder {
-    color: #a0aec0; /* Personaliza el color del texto de marcador de posición */
+    color: #a0aec0;
+    /* Personaliza el color del texto de marcador de posición */
 }
 
-h3{
+h3 {
 
-text-align: center;
+    text-align: center;
 
 }
 
@@ -131,10 +136,12 @@ text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px; /* Ajusta la altura según sea necesario */
-  }
-  
-  label, button {
-    margin: 50 250px; /* Ajusta el margen entre el label y el botón según sea necesario */
-  }
+    height: 50px;
+    /* Ajusta la altura según sea necesario */
+}
 
+label,
+button {
+    margin: 50 250px;
+    /* Ajusta el margen entre el label y el botón según sea necesario */
+}
