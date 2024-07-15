@@ -363,6 +363,8 @@ a {
     cursor: pointer;
   }
 }
+<<<<<<< HEAD
+=======
 
 body.dark {
   background-color: #2e2e2e;
@@ -385,3 +387,4 @@ body.dark .container {
   font-size: 3em;
 }
  
+>>>>>>> 61609b4349894886708ec4f74835274ade301bf8

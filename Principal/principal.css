@@ -9,6 +9,8 @@
     scroll-padding-top: 3rem;
 }
 
+<<<<<<< HEAD
+=======
 body.dark {
     background-color: #2e2e2e;
     color: #ffffff;
@@ -21,6 +23,7 @@ body.dark {
   .toggle {
     display: none;
   }
+>>>>>>> 61609b4349894886708ec4f74835274ade301bf8
 :root {
     --main-color: #FA4616;
     --text-color: #003865;
