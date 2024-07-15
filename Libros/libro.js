@@ -11,7 +11,11 @@
 
      //NIÑOS
      ['5', 'A que te cojo ratón', 'NIÑOS', 'URL-Spreaker', '/Recursos/Pdfs/A-QUE-TE-COJO-RATON.pdf', 'URL-video', '/Recursos/imagenes/libro16.webp'],
+<<<<<<< HEAD
      ['6', 'Cuentos y pasatiempos', 'NIÑOS', 'URL-Spreaker', '/Recursos/Pdfs/Cuentos-y-pasatiempos.pdf', 'URL-video', '/Recursos/imagenes/libro25.webp'],
+=======
+     ['6', 'Cuentos y pasatiempos', 'NIÑOS', 'https:widget.spreaker.com/player?show_id=4421091&theme=light&playlist=show&playlist-continuous=true&chapters-image=true', '/Recursos/Pdfs/Cuentos-y-pasatiempos.pdf', 'URL-video', '/Recursos/imagenes/libro25.webp'],
+>>>>>>> 61609b4349894886708ec4f74835274ade301bf8
      ['7', 'Cuentos y maravillosos', 'NIÑOS', 'URL-Spreaker', '/Recursos/Pdfs/Cuentos-Maravillosos-4ta-Edicion.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
 
      //
