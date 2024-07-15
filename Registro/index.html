@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Recursos/Imagenes/favicon.webp" type="image/x-icon">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="/Registro/style.css">
+    <link rel="stylesheet" type="text/css" href="/Registro/StyleR.css">
+</head>
+<body>
+    <label for="toggle" id="label_toggle" class="label_toggle"><i class="fa-solid fa-toggle-off"></i></label>
+    <input type="checkbox" id="toggle" class="toggle">
+    <div class="container">
+        <div class="regir">
+            <h1>Registrate</h1>
+            <img src="/Recursos/Imagenes/pc.png" alt="Foto">
+            <button type="button" ><a href="/Login/index.html">Iniciar Sesión</a></button>
+        </div>
+        <div class="form-group">
+            <img class="img2" src="/Recursos/Imagenes/secretos.png" alt="Foto">
+            <form >
+                <div class="input-icon">
+                    <img src="/Recursos/Imagenes/icon.png" alt="icono" class="icon">
+                    <input type="text" id="nombre" name="nombre"  placeholder="Nombre" required >
+                    <img src="/Recursos/Imagenes/icon.png" alt="icono" class="icon">
+                    <input type="text" id="apellido" name="apellido"  placeholder="Apellido" required>
+                    <img src="/Recursos/Imagenes/icon.png" alt="icono" class="icon">
+                    <select id="tipo_documento" name="tipo_documento" required>
+                        <option value="">Tipo de documento </option>
+                        <option value="tarjeta_identidad">Tarjeta de Identidad</option>
+                        <option value="cedula_ciudadania">Cédula de Ciudadanía</option>
+                    </select>
+                    <img src="/Recursos/Imagenes/icon.png" alt="icono" class="icon">
+                    <input type="text" id="n_documento" name="n_documento" placeholder="Número de documento" required>
+                    <img src="/Recursos/Imagenes/icon.png" alt="icono" class="icon">
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    <img src="/Recursos/Imagenes/icon.png" alt="icono" class="icon">
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <img src="/Recursos/Imagenes/icon.png" alt="icono" class="icon">
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmar contraseña" required><br>
+                    <button class="boton" type="submit"><a href="/libros/libro.html">Aceptar</a></button>
+                    <h3 class="or-separator">o</h3>
+                    <img src="/Recursos/Imagenes/google.png" alt="icono" class="icono"> <button class="buton" type="submit"> Google</button>  <img src="/Recursos/Imagenes/face.png" alt="icono" class="icono1"><button class="buton" type="submit"> Facebook</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- celular -->
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo-container">
+                <img src="/Recursos/Imagenes/logo-blanco.webp" alt="Logo" class="logo">
+                <h2>REGISTRO</h2>
+            </div>
+        </div>
+        <div class="login-avatar">
+            <img src="/Recursos/Imagenes/Registro.png" alt="Avatar">
+        </div>
+        <form class="login-form">
+            <div class="input-container">
+                <input type="text" placeholder="Nombre" required>
+            </div>
+            <div class="input-container">
+                <input type="text" placeholder="Apellido" required>
+            </div>
+            <div class="input-container">
+            <select required>
+                <option value="">Tipo de documento</option>
+                <option value="ti">Tarjeta de Identidad</option>
+                <option value="cc">Cédula de Ciudadanía</option>
+            </select>                 
+            </div>
+            <div class="input-container">
+                <input type="number" placeholder="Numero de documento" required>
+            </div>
+            <div class="input-container">
+                <input type="email" placeholder="E-mail" required>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="Crear contraseña" required>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="Repetir contraseña" required>
+            </div>
+            <button type="submit" class="login-button"><a href="/Libros/libro.html">Aceptar</a></button>
+        </form>
+        <div class="login-footer">
+            <span class="or-separator">or</span>
+              <button class="or">
+                <img src="/Recursos/Imagenes/google.png" alt="Logo de Google" width="20" height="20"> Google
+              </button>
+              <br><br>
+              <button class="or">
+                <img src="/Recursos/Imagenes/Facebook.png" alt="Logo de Facebook" width="20" height="20"> Facebook
+              </button>
+              <br><br>
+        </div>
+    </div>
+    <script src="/Perfil/oscuro.js"></script>
+</body>
+</html>
