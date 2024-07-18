@@ -9,14 +9,26 @@
     scroll-padding-top: 3rem;
 }
 
-
+/* Color para los temas */
 body.dark {
+    background-color: #1e1e1e;
+    color: #FFFFFF;
+  }
+   
+  body.dark .container {
+    background-color: #1e1e1e;
+  }
+
+  body.dark .container-box {
     background-color: #2e2e2e;
-    color: #ffffff;
 }
 
-body.dark .container {
-    background-color: #444444;
+body.dark .row {
+    background-color: #2e2e2e;
+}
+
+body.dark .box {
+    background-color: #2e2e2e;
 }
 
 .toggle {
@@ -569,7 +581,7 @@ header.sticky {
 
 .scroll {
     position: fixed;
-    bottom: 2.2rem;
+    bottom: 4.2rem;
     border-top: 2rem;
     right: 3.2rem;
 }
@@ -580,6 +592,12 @@ header.sticky {
     background: var(--main-color);
     border-radius: 2rem;
     padding: 10px;
+}
+
+.scroll i:hover {
+background: var(--hover-color);
+color: var(--bg-color);
+box-shadow: var(--hover-color) 0px 1px 25px;
 }
 
 /*Footer*/
@@ -747,7 +765,7 @@ header.sticky {
         flex-direction: row;
         justify-content: space-evenly;
         row-gap: 1px;
-        padding: 10px;
+        padding: 6px;
         border-top: 1px solid hsl(200, 100%, 99% / 5%);
         background: linear-gradient(8deg,
                 hsl(240 17% 14% / 100%) 5%,
@@ -814,6 +832,10 @@ header.sticky {
     .footer-left,
     .footer-right {
         min-width: 120px;
+    }
+
+    .footer {
+        margin-bottom: 55px;
     }
 }
 

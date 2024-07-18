@@ -12,12 +12,16 @@ body {
 }
 
 body.dark {
-    background-color: #2e2e2e;
-    color: #ffffff;
+    background-color: #1e1e1e;
+    color: #FFFFFF;
+  }
+   
+body.dark .container {
+    background-color: #1e1e1e;
 }
 
-body.dark .container {
-    background-color: #444444;
+body.dark .product-card {
+    background-color: #2e2e2e;
 }
 
 .toggle {
@@ -163,6 +167,7 @@ body {
     /* Adjusted to fit within the card */
     height: 350px;
     /* Maintain aspect ratio */
+    border-radius: 4px;
 }
 
 .iconos {
@@ -310,7 +315,7 @@ header {
         flex-direction: row;
         justify-content: space-evenly;
         row-gap: 1px;
-        padding: 10px;
+        padding: 6px;
         border-top: 1px solid hsl(200, 100%, 99% / 5%);
         background: linear-gradient(8deg,
                 hsl(240 17% 14% / 100%) 5%,
