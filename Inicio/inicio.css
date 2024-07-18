@@ -4,18 +4,7 @@
     box-sizing: border-box;
 }
 
-body.dark {
-    background-color: #2e2e2e;
-    color: #ffffff;
-  }
-   
-  body.dark .container {
-    background-color: #444444;
-  }
-   
-  .toggle {
-    display: none;
-  }
+
 
 body {
     font-family: "Roboto", sans-serif;
