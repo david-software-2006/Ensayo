@@ -80,13 +80,14 @@ img {
     cursor: pointer;
 }
 
-.bx-heart {
-    color: red;
+.bx-heart-fill {
+    color: red; /* Color para íconos rellenos de corazón */
 }
 
-.bx-star {
-    color: gold;
+.bx-star-fill {
+    color: gold; /* Color para íconos rellenos de estrella */
 }
+
 
 body {
     background-color: var(--body-color);
@@ -135,6 +136,22 @@ body {
     /* Espacio entre categorías */
 }
 
+/* Ajusta el contenedor de Swiper */
+.swiper-container {
+    width: 100%;
+    max-width: 1200px; /* Ajusta según el diseño */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Ajusta el ancho y margen de cada slide */
+.swiper-slide {
+    width: 200px; /* Ancho reducido de cada slide */
+    box-sizing: border-box;
+    margin-right: 10px; /* Espacio reducido entre los slides */
+    flex-shrink: 0; /* Evita que los slides se reduzcan */
+}
+
 .products {
     display: flex;
     gap: 20px;
@@ -146,6 +163,7 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border: 1px solid #ddd;
     border-radius: 5px;
+    width: 100%;
     padding: 10px;
     margin: 8px 8px 10px;
     box-sizing: border-box;
@@ -188,6 +206,7 @@ body {
     background-color: var(--main-color);
     border-color: rgb(226, 226, 255);
     color: var(--body-color);
+    margin-bottom: 10px;
 }
 
 .boton:hover {
@@ -248,6 +267,7 @@ header {
 
 .search-box .bx {
     font-size: 1.1rem;
+    color: var(--title-color);
 }
 
 .search-box .bx:hover {
@@ -374,6 +394,10 @@ header {
         font-size: 16px;
     }
 
+    .swiper-slide {
+        width: 150px; 
+    }
+
     .boton {
         padding: 8px 16px;
         font-size: 16px;
@@ -483,3 +507,12 @@ header {
         height: 250px;
     }
 }
+
+
+
+
+
+
+
+
+

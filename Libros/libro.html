@@ -7,6 +7,7 @@
     <title>Libros</title>
     <link rel="stylesheet" href="/Libros/libro.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/be6261ecc3.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -25,13 +26,13 @@
 
             <!--Search Box-->
             <div class="search-box">
-                <input class="search" type="search" name="" id="search-input" placeholder="Search Book">
+                <input class="search" type="search" name="" id="search-input" placeholder="Buscar libros">
                 <i class='bx bx-search'></i>
             </div>
 
             <!--User-->
             <a href="/Perfil/Perfil.html" class="user">
-                <img src="/Recursos/Imagenes/user.jpg" alt="user" class="user-img">
+                <img src="/Recursos/Imagenes/usuario.png" alt="user" class="user-img">
             </a>
 
              <!--Nav Bar-->
@@ -52,7 +53,7 @@
                     <span class="nav-link-title">Explore</span>
                 </a> -->
 
-                <a href="/testPDF-main/Waos/waos.html" class="nav-link">
+                <a href="/Indice/indice.html" class="nav-link">
                     <i class='bx bx-list-ul'></i>
                     <span class="nav-link-title">Indice</span>
                 </a>
@@ -72,11 +73,14 @@
 
     <div class="container">
         <h1 class="section-title">LIBROS</h1>
-        <div class="category scrollable-container">
-            <div id="listalibros"></div> <!-- Este es el contenedor donde se agregarán los libros -->
+        <div class="category">
+            <div class="scrollable-container">
+                <div id="listalibros"></div>
+            </div>
         </div>
         <div id="search-results" class="search-results hidden"></div>
     </div>
+    
     
     <!-- <div class="container">
         <h1 class="section-title">LIBROS</h1>
@@ -207,6 +211,7 @@
     <!-- </div> -->
 
     <script src="/Libros/libro.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/Perfil/oscuro.js"></script>
 
 </body>

@@ -1,58 +1,94 @@
-// Function to open edit profile overlay
+// Función para abrir el overlay de editar perfil
 function openEditProfile() {
   document.getElementById("edit-profile-overlay").style.display = "block";
 }
 
-// Function to close edit profile overlay
+// Función para cerrar el overlay de editar perfil
 function closeEditProfile() {
   document.getElementById("edit-profile-overlay").style.display = "none";
 }
 
-// Function to edit profile field
-function editField(fieldName) {
-  const value = document.getElementById(fieldName).innerText;
-  document.getElementById("edit-" + fieldName).value = value;
-  openEditProfile();
-}
+// Función para enviar el formulario de editar perfil
+document.getElementById("edit-profile-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
 
-// Function to submit edited profile
-document
-  .getElementById("edit-profile-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    formData.forEach((value, key) => {
-      document.getElementById(key).innerText = value;
-    });
-    closeEditProfile();
+  // Actualiza los campos del perfil con los nuevos datos
+  formData.forEach((value, key) => {
+      if (key !== 'profile-pic') {
+          document.getElementById(key).innerText = value;
+      }
   });
 
-// Function to populate profile fields with initial data
+  // Guarda los datos actualizados en localStorage
+  const updatedProfileData = {
+      nombre: document.getElementById('edit-name').value,
+      apellido: document.getElementById('edit-lastname').value,
+      email: document.getElementById('edit-email').value,
+      bio: document.getElementById('edit-bio').value,
+      profilePic: document.getElementById('profile-pic').src
+  };
+  localStorage.setItem('profileData', JSON.stringify(updatedProfileData));
+
+  // Actualiza el registro correspondiente en localStorage
+  updateRegistros(updatedProfileData);
+
+  closeEditProfile();
+});
+
+// Función para poblar los campos del perfil con los datos iniciales
 function populateProfileFields() {
-  const fields = ["name", "username", "email", "edit-bio"]; // Add other field IDs here
-  fields.forEach((field) => {
-    const value = document.getElementById(field).innerText;
-    document.getElementById("edit-" + field).value = value;
-  });
+  const profileData = JSON.parse(localStorage.getItem('profileData'));
+
+  if (profileData) {
+      document.getElementById('name').innerText = profileData.nombre || 'No completado';
+      document.getElementById('lastname').innerText = profileData.apellido || 'No completado';
+      document.getElementById('email').innerText = profileData.email || 'No completado';
+      document.getElementById('bio').innerText = profileData.bio || '';
+
+      // Rellena los campos de edición con los datos existentes
+      document.getElementById('edit-name').value = profileData.nombre || '';
+      document.getElementById('edit-lastname').value = profileData.apellido || '';
+      document.getElementById('edit-email').value = profileData.email || '';
+      document.getElementById('edit-bio').value = profileData.bio || '';
+
+      // Rellena la imagen de perfil con la URL guardada
+      document.getElementById('profile-pic').src = profileData.profilePic || 'placeholder-user.jpg';
+  }
 }
 
-// Call populateProfileFields when the page loads
-document.addEventListener("DOMContentLoaded", function () {
+// Función para actualizar el registro en localStorage
+function updateRegistros(updatedProfileData) {
+  let registros = JSON.parse(localStorage.getItem('registros')) || [];
+
+  // Actualiza el registro correspondiente
+  registros = registros.map(record => 
+      record.email === updatedProfileData.email ? updatedProfileData : record
+  );
+
+  // Guarda los datos actualizados en localStorage
+  localStorage.setItem('registros', JSON.stringify(registros));
+}
+
+// Llama a populateProfileFields cuando la página se cargue
+document.addEventListener("DOMContentLoaded", function() {
   populateProfileFields();
 });
 
-// Function to change profile picture
-document
-  .getElementById("profile-pic-input")
-  .addEventListener("change", function (event) {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-    reader.onload = function (e) {
+// Función para cambiar la imagen de perfil
+document.getElementById("profile-pic-input").addEventListener("change", function(event) {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+  reader.onload = function(e) {
       document.getElementById("profile-pic").src = e.target.result;
-    };
-    reader.readAsDataURL(file);
-});
 
+      // Actualiza la imagen en el localStorage
+      const profileData = JSON.parse(localStorage.getItem('profileData')) || {};
+      profileData.profilePic = e.target.result;
+      localStorage.setItem('profileData', JSON.stringify(profileData));
+  };
+  reader.readAsDataURL(file);
+});
 
 // Función para mostrar los libros favoritos en la página de perfil
 function showFavoriteBooks() {
@@ -106,23 +142,32 @@ function showFavoriteBooks() {
   });
 }
 
-
-
-
-
 // Función para eliminar un libro del perfil de favoritos
 function deleteBook(title) {
-  let profileBooks = JSON.parse(localStorage.getItem('profileBooks')) || [];
+  // Show confirmation dialog
+  if (confirm(`¿Estás seguro de eliminar "${title}" de tus favoritos?`)) {
+    // Proceed with deletion
+    let profileBooks = JSON.parse(localStorage.getItem('profileBooks')) || [];
 
-  // Filtrar el libro a eliminar por su título
-  profileBooks = profileBooks.filter(book => book.title !== title);
+    // Find index of the book with the given title
+    const index = profileBooks.findIndex(book => book.title === title);
 
-  // Guardar la lista actualizada en el localStorage
-  localStorage.setItem('profileBooks', JSON.stringify(profileBooks));
+    if (index !== -1) {
+      // Remove the book from the array
+      profileBooks.splice(index, 1);
 
-  // Mostrar nuevamente los libros actualizados en el perfil
-  showFavoriteBooks();
+      // Update localStorage
+      localStorage.setItem('profileBooks', JSON.stringify(profileBooks));
+
+      // Update the UI to reflect the deletion
+      showFavoriteBooks();
+    }
+  } else {
+    // If user cancels deletion
+    return;
+  }
 }
+
 
 // Llamar a showFavoriteBooks cuando la página se cargue por completo
 document.addEventListener('DOMContentLoaded', showFavoriteBooks);
@@ -131,9 +176,3 @@ document.addEventListener('DOMContentLoaded', showFavoriteBooks);
 function openPDF(pdfPath, title) {
   window.location.href = `/VerPdf/visor.html?pdf=${encodeURIComponent(pdfPath)}&title=${encodeURIComponent(title)}`;
 }
-
-
-
-
-
-

@@ -1,57 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/Recursos/Imagenes/favicon.webp" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/be6261ecc3.js" crossorigin="anonymous"></script>
-
     <title>User Profile</title>
     <link rel="stylesheet" href="/Perfil/perfil.css">
 </head>
-
 <body>
-
-
     <label for="toggle" id="label_toggle" class="label_toggle"><i class="fa-solid fa-toggle-off"></i></label>
     <input type="checkbox" id="toggle" class="toggle">
-
 
     <div class="navbar">
         <a href="/principal.html" class="nav-link nav-active">
             <i class='bx bx-home'></i>
             <span class="nav-link-title">Principal</span>
         </a>
-
         <a href="/Perfil/perfil.html" class="nav-link">
             <i class='bx bx-user-circle'></i>
             <span class="nav-link-title">Perfil</span>
         </a>
-
-        <!-- <a href="#movies" class="nav-link">
-            <i class='bx bx-compass'></i>
-            <span class="nav-link-title">Explore</span>
-        </a> -->
-
-        <a href="/testPDF-main/Waos/waos.html" class="nav-link">
+        <a href="/Indice/indice.html" class="nav-link">
             <i class='bx bx-list-ul'></i>
             <span class="nav-link-title">Indice</span>
         </a>
-
-
         <a href="/Libros/libro.html" class="nav-link">
             <i class='bx bx-book-bookmark'></i>
             <span class="nav-link-title">Libros</span>
         </a>
-
         <a href="/Guardados/guardados.html" class="nav-link">
             <i class='bx bxs-save'></i>
             <span class="nav-link-title">Guardados</span>
         </a>
     </div>
-</div>
 
     <div class="container">
         <h1 class="profile-title">PERFIL</h1>
@@ -65,19 +48,19 @@
             <hr class="transparent-hr">
             <div class="detail">
                 <span class="label">Nombre</span>
-                <span id="name" class="value">Helena Hills</span>
+                <span id="name" class="value"></span>
             </div>
             <div class="detail">
-                <span class="label">Usuario</span>
-                <span id="username" class="value">@username</span>
+                <span class="label">Apellido</span>
+                <span id="lastname" class="value"></span>
             </div>
             <div class="detail">
                 <span class="label">Correo electrónico</span>
-                <span id="email" class="value">name@domain.com</span>
+                <span id="email" class="value"></span>
             </div>
             <div class="detail">
                 <span class="label">Bio</span>
-                <span id="bio" class="value">Una descripción de este usuario.</span>
+                <span id="bio" class="value"></span>
             </div>
             <button class="edit-button" onclick="openEditProfile()">Editar</button>
         </div>
@@ -92,8 +75,8 @@
                     <input type="text" id="edit-name" name="name">
                 </div>
                 <div class="form-group">
-                    <label for="edit-username">Usuario:</label>
-                    <input type="text" id="edit-username" name="username">
+                    <label for="edit-lastname">Apellido:</label>
+                    <input type="text" id="edit-lastname" name="lastname">
                 </div>
                 <div class="form-group">
                     <label for="edit-email">Correo electrónico:</label>
@@ -120,7 +103,5 @@
 
     <script src="/Perfil/perfil.js"></script>
     <script src="/Perfil/oscuro.js"></script>
-
 </body>
-
 </html>

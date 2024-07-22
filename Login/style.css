@@ -1,110 +1,118 @@
+/* Estilos comunes para el cuerpo de la página */
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
+/* Estilo para el contenedor principal */
 .container {
     display: flex;
     justify-content: center;
+    align-items: center;
     max-width: 1100px;
+    width: 100%;
     margin: 0 auto;
     border-top-left-radius: 10px;
 }
 
-
-body.dark {
-    background-color: #2e2e2e;
-    color: #ffffff;
-}
-
-body.dark .container {
-    background-color: #444444;
-}
-
-.toggle {
-    display: none;
-}
-
-
+/* Estilos para los contenedores secundarios */
 .regir,
 .form-group {
     padding: 20px;
     box-sizing: border-box;
 }
 
+/* Estilo para el contenedor de registro */
 .regir {
-    width: 34%;
+    width: 400px;
     background-color: #fa4616;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    /* Añadiendo borde redondeado en la esquina inferior izquierda */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
+/* Estilos para el título del contenedor de registro */
+.regir h1 {
+    color: #ffffff;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las imágenes del contenedor de registro */
+.regir img {
+    width: 325px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el botón de registro */
+.regir .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #002748;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.regir .button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el contenedor del formulario */
 .form-group {
-    width: 40%;
+    width: 500px;
     background-color: #002748;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    /* Añadiendo borde redondeado en la esquina inferior derecha */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Estilos para los campos de entrada del formulario */
 .input-icon {
     position: relative;
-    padding: 50px 5px;
+    margin: 33px 0;
 }
 
-.input-icon img.icon {
-    position: absolute;
-    transform: translateY(50%);
-    width: 25px;
-    height: 25px;
-    left: 60px;
-}
-
-.input-icon img.iconD {
-    position: absolute;
-    transform: translateY(25%);
-    width: 25px;
-    height: 25px;
-    left: 60px;
-}
-
-.input-icon img.icono {
-    position: absolute;
-    transform: translateY(21%);
-    width: 38px;
-    height: 28px;
-    left: 40px;
-}
-
-.input-icon img.icono1 {
-    position: absolute;
-    transform: translateY(28%);
-    width: 35px;
-    height: 25px;
-    left: 225px;
-}
-
-.input-icon input,
-.input-icon select {
-    width: 75%;
-    padding: 5px 10px 10px 10px;
+.input-icon input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
     border-radius: 15px;
+    border: none;
     display: flex;
-    margin: 8px auto;
-    padding-left: 45px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
-.input-icon select {
-    width: calc(58% - 10px);
-    padding: 7px 30px;
-    padding-left: 45px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    display: flex;
-    margin: 15px auto;
+.input-icon .icon,
+.input-icon .iconD {
+    position: absolute;
+    font-size: 20px;
+    color: #000000;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-icon .icon {
+    left: 10px;
+}
+
+.input-icon .iconD {
+    left: 10px;
 }
 
 .img2 {
@@ -113,6 +121,7 @@ body.dark .container {
     margin: -20px auto;
 }
 
+/* Estilos para los botones */
 .boton {
     padding: 10px 20px;
     border: none;
@@ -122,14 +131,14 @@ body.dark .container {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 0% 18% auto;
     width: 250px;
+    display: block;
+    margin: 20px auto;
 }
 
 .boton:hover {
     background-color: #b35100;
 }
-
 
 .buton {
     padding: 10px 27px;
@@ -139,56 +148,28 @@ body.dark .container {
     color: rgb(0, 0, 0);
     font-size: 15px;
     transition: background-color 0.3s;
-    margin: 0% 10% auto;
+    display: block;
+    margin: 20px auto;
 }
 
 .buton:hover {
     background-color: #fa4616;
 }
 
+/* Estilos para los enlaces de recuperación de contraseña */
 .forgot-password {
     display: block;
     text-align: center;
     margin: 10px 0;
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .forgot-password:visited {
     color: white;
 }
 
-.regir img {
-    width: 325px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 20px 70px;
-    padding-left: 30px;
-}
-
-.regir h1 {
-    color: #ffffff;
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.regir button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #002748;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-}
-
-.regir button:hover {
-    background-color: #0056b3;
-}
-
+/* Estilos para la separación de los botones sociales */
 .or-separator {
     margin: 20px 0;
     position: relative;
@@ -214,18 +195,50 @@ body.dark .container {
     right: 0;
 }
 
+/* Estilos para los botones sociales */
+.social-buttons {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    justify-content: center; /* Alinear horizontalmente al centro */
+}
+
+.social-buttons .buton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buton:hover {
+    background-color: #FF714B;
+    color: #ffffff;
+}
+
+.social-buttons .buton i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.bxl-google {
+    font-size: 20px;
+}
+
+.bxl-facebook {
+    color: #3b5998; /* Azul de Facebook */
+    font-size: 20px;
+}
+
 a {
     text-decoration: none;
     color: #ffffff;
 }
 
-@media (max-width:768px) {
+/* Media queries para ocultar elementos según el ancho de la pantalla */
+@media (max-width: 768px) {
     .container {
         display: none;
     }
 }
 
-@media (min-width:769px) {
+@media (min-width: 769px) {
     .login-container {
         display: none;
     }

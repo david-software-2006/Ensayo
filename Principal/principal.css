@@ -202,6 +202,7 @@ header {
 
 .search-box .bx {
     font-size: 1.1rem;
+    color: var(--text-color);
 }
 
 .search-box .bx:hover {
@@ -260,8 +261,8 @@ header {
 
 /* Home */
 
-section {
-    padding: 70px 14% 60px;
+section{
+    padding: 3rem 0 2rem;
 }
 
 .home {
@@ -274,6 +275,13 @@ section {
     gap: 2rem;
     margin-top: 200px;
     margin-bottom: 150px;
+}
+
+.container-home {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+    margin-top: 140px;
 }
 
 .home-img img {
@@ -437,7 +445,7 @@ header.sticky {
 .row {
     position: relative;
     height: 600px;
-    padding: 50px 50px 40px;
+    padding: 30px 30px 40px;
     background: var(--other-color);
     border-radius: 3rem;
 }
