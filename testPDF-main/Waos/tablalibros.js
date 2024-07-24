@@ -1,10 +1,10 @@
 const url = '/Recursos/PDFs/'; // Ruta de la carpeta que contiene los archivos PDF.
 const conCategoría = [
-  ['1', 'CON LOS PELOS DE PUNTA', 'Historia', '', '/Recursos/PDFs/CON-LOS-PELOS-DE-PUNTA.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2023/12/Portada-Con-los-pelos-de-punta.webp'],
-  ['2', 'ERASE UNA VEZ EN COLOMBIA', 'Juegos', '', '/Recursos/PDFs/ERASE-UNA-VEZ-EN-COLOMBIA.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/Portada-Erase-una-vez-en-colombia.webp'],
-  ['3', 'TODO LO CONTRARIO', 'Adultos', '', '/Recursos/PDFs/TODO-LO-CONTRARIO.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/PORTADA-CONTRARIOS.webp'],
-  ['4', 'Cuentos para desenredar enredos', 'Adultos', '', '/Recursos/PDFs/cuentos-para-desenredar-enredos.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/PORTADA-ENREDOS.webp'],
-  ['5', 'Entre cuento y cuento', 'Niños', '', '/Recursos/PDFs/ENTRE-CUENTO-Y-CUENTO.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/Portada-Entre-cuento-y-cuento.webp'],
+  ['1', 'CON LOS PELOS DE PUNTA', 'Historia', 'https://open.spotify.com/embed/show/4pgUCRcRIQNKwPJBLMWxjP?utm_source=generator', '/Recursos/Pdfs/CON-LOS-PELOS-DE-PUNTA.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2023/12/Portada-Con-los-pelos-de-punta.webp'],
+  ['2', 'ERASE UNA VEZ EN COLOMBIA', 'Juegos', '', '/Recursos/Pdfs/ERASE-UNA-VEZ-EN-COLOMBIA.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/Portada-Erase-una-vez-en-colombia.webp'],
+  ['3', 'TODO LO CONTRARIO', 'Adultos', 'https://open.spotify.com/embed/episode/1Esnox0odDsbJgEXLcsE2Z?utm_source=generator', '/Recursos/Pdfs/TODO-LO-CONTRARIO.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/PORTADA-CONTRARIOS.webp'],
+  ['4', 'Cuentos para desenredar enredos', 'Adultos', 'https://open.spotify.com/embed/episode/53hWzLBrhZujbAJIuq8KIp?utm_source=generator', '/Recursos/Pdfs/cuentos-para-desenredar-enredos.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/PORTADA-ENREDOS.webp'],
+  ['5', 'Entre cuento y cuento', 'Niños', '', '/Recursos/Pdfs/ENTRE-CUENTO-Y-CUENTO.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/Portada-Entre-cuento-y-cuento.webp'],
   ['6', 'salud para contar', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/portada-Salud-para-contar.webp']
 ];
 
