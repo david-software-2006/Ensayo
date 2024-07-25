@@ -1,28 +1,27 @@
-// Define la ruta base de la carpeta que contiene los archivos PDF
-let url = '/Recursos/PDFs/';
-
-// Categorías y libros iniciales
-const conCategoría = [
-    // CUENTO
-    ['1', 'Entre cuento y cuento', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/ENTRE-CUENTO-Y-CUENTO.pdf', 'URL-video', '/Recursos/imagenes/libro9.webp'],
-    ['3', 'Cuentos maravillosos', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/Cuentos-Maravillosos-4ta-Edicion.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
-    ['4', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/cuentos-para-contar.pdf', 'URL-video', '/Recursos/imagenes/libro10.webp'],
-    ['8', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/cuentos-para-contar.pdf', 'URL-video', '/Recursos/imagenes/libro10.webp'],
-    ['9', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/cuentos-para-contar.pdf', 'URL-video', '/Recursos/imagenes/libro11.webp'],
-    ['10', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/cuentos-para-contar.pdf', 'URL-video', '/Recursos/imagenes/libro11.webp'],
-
-
-    // NIÑOS
-    ['5', 'A que te cojo ratón', 'NIÑOS', 'URL-Spreaker', '/Recursos/PDFs/A-QUE-TE-COJO-RATON.pdf', 'URL-video', '/Recursos/imagenes/libro16.webp'],
-    ['6', 'Cuentos y pasatiempos', 'NIÑOS', 'https://widget.spreaker.com/player?show_id=4421091&theme=light&playlist=show&playlist-continuous=true&chapters-image=true', '/Recursos/PDFs/ENTRE-CUENTO-Y-CUENTO.pdf', 'URL-video', '/Recursos/imagenes/libro25.webp'],
-    ['7', 'Cuentos y maravillosos', 'NIÑOS', 'URL-Spreaker', '/Recursos/PDFs/Cuentos-Maravillosos-4ta-Edicion.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
-];
+ // Define la ruta base de la carpeta que contiene los archivos PDF
+ let url = '/Recursos/Pdfs/';
  
-// Array de nuevos libros a agregar
-const nuevosLibros = [
-    // ['', 'Nuevo Libro 1', 'Historia', 'URL-Spreaker-Ejemplo', '/PDFs/nuevo-libro-1.pdf', 'URL-video-ejemplo', '/Recursos/imagenes/nuevo-libro-1.webp'],
-    // ['', 'Nuevo Libro 2', 'Juegos', 'URL-Spreaker-Ejemplo', '/PDFs/nuevo-libro-2.pdf', 'URL-video-ejemplo', '/Recursos/imagenes/nuevo-libro-2.webp']
-];
+ // Categorías y libros iniciales
+ const conCategoría = [
+     // CUENTO
+     ['1', 'Entre cuento y cuento', 'CUENTO', 'URL-Spreaker', '/Recursos/Pdfs/lectura.pdf', 'URL-video', '/Recursos/imagenes/libro9.webp'],
+     ['3', 'Cuentos maravillosos', 'CUENTO', 'URL-Spreaker', '/Recursos/Pdfs/Cuentos-Maravillosos-4ta-Edicion.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
+     ['4', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/Pdfs/cuentos-para-contar.pdf', 'URL-video', '/Recursos/imagenes/libro10.webp'],
+ 
+     //NIÑOS
+     ['5', 'A que te cojo ratón', 'NIÑOS', 'URL-Spreaker', '/Recursos/Pdfs/A-QUE-TE-COJO-RATON.pdf', 'URL-video', '/Recursos/imagenes/libro16.webp'],
+     ['6', 'Cuentos y pasatiempos', 'NIÑOS', 'https://open.spotify.com/embed/episode/2kxA7GaDj9eRjZEY2L817g?utm_source=generator', '/Recursos/Pdfs/Cuentos-y-pasatiempos.pdf', 'URL-video', '/Recursos/imagenes/libro25.webp'],
+     ['7', 'Cuentos y maravillosos', 'NIÑOS', 'URL-Spreaker', '/Recursos/Pdfs/Cuentos-Maravillosos-4ta-Edicion.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
+ 
+     //
+ ];
+ 
+ // Array de nuevos libros a agregar
+ const nuevosLibros = [
+     // ['', 'Nuevo Libro 1', 'Historia', 'URL-Spreaker-Ejemplo', '/Pdfs/nuevo-libro-1.pdf', 'URL-video-ejemplo', '/Recursos/imagenes/nuevo-libro-1.webp'],
+     // ['', 'Nuevo Libro 2', 'Juegos', 'URL-Spreaker-Ejemplo', '/Pdfs/nuevo-libro-2.pdf', 'URL-video-ejemplo', '/Recursos/imagenes/nuevo-libro-2.webp']
+ ];
+
  
 // Almacenar en localStorage
 localStorage.setItem('conCategoría', JSON.stringify(conCategoría));
@@ -86,8 +85,6 @@ function showAlert(message) {
         }, 500);
     }, 4000);
 }
-
-
 
  
 // Función para guardar un libro en Guardados
@@ -248,6 +245,7 @@ document.querySelectorAll('.swiper-container').forEach(container => {
         },
     });
 });
+
 
     
     console.log('Libros agregados e inicialización de Swiper completa');
