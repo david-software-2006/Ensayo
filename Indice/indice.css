@@ -1,3 +1,17 @@
+:root {
+  --main-color: #FA4616;
+  --text-color: #003865;
+  --other-color: #5F8DB5;
+  --second-color: #7A7A7A;
+  --bg-color: #FFFFFF;
+  --hover-color: #FF714B;
+
+
+  --big-font: 4.5rem;
+  --h2-font: 2.6rem;
+  --p-font: 1.1rem;
+}
+  
   * {
     margin: 0;
     padding: 0;
@@ -81,7 +95,7 @@
 
   .logo img {
     height: 100px;
-    width: 130px;
+    width: auto;
   }
 
   .search-box {
@@ -237,6 +251,198 @@
   .icon {
     margin-left: 8px;
   }
+
+/* Footer */
+
+.footer {
+  background-color: var(--other-color);
+  color: var(--bg-color);
+  padding: 20px 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+  border-top: 2px solid #dee2e6;
+  margin-top: 200px;
+}
+
+
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-left p,
+.footer-left a {
+  margin: 5px 0 0 10px;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinear elementos a la derecha */
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end; /* Alinear íconos a la derecha */
+}
+
+.footer-right ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-right ul li a i {
+  text-decoration: none;
+  font-size: 30px;
+  color: var(--bg-color);
+}
+
+.footer-right ul li a:hover {
+  color: #0056b3;
+}
+
+.footer-logo {
+  margin: 0;
+  position: relative;
+  right: 100px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #dee2e6;
+  padding-top: 10px;
+  font-family: roboto;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.lions {
+  width: 50px;
+  height: 50px;
+}
+
+.logo__blanco {
+  width: 100px;
+  height: 100px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1545px) {
+  .footer-container {
+      padding: 0 10px;
+  }
+
+  .footer-left,
+  .footer-right {
+      min-width: 150px;
+  }
+
+  .footer-logo {
+      right: 50px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .footer-right {
+      align-items: flex-start;
+  }
+
+  .footer-logo {
+      right: 0;
+  }
+}
+
+@media (max-width: 1076px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-left,
+  .footer-right {
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-logo {
+      position: static;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1045px) {
+  .footer-container {
+      padding: 0 5px;
+  }
+
+  .footer-left,
+  .footer-right {
+      min-width: 120px;
+  }
+
+  .footer {
+      margin-bottom: 55px;
+  }
+}
+
+@media (max-width: 860px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 10px;
+  }
+
+  .footer-left,
+  .footer-right {
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-right ul {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer-left,
+  .footer-right {
+      flex: 1 0 100%;
+      margin-bottom: 20px;
+  }
+
+  .footer-right ul {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .footer-container {
+      padding: 0 10px;
+  }
+}
+
+@media (max-width: 475px) {
+  .footer-right ul {
+      justify-content: center;
+  }
+}
+
 
   @media (max-width: 1190px) {
     .navbar {
