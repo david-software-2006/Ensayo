@@ -41,6 +41,13 @@ body.dark .product-card {
     --container-color: #5F8DB5;
     --text-color: #7A7A7A;
     --title-color: #003865;
+
+    /* Colores para el modal */
+    --modal-background: #FFEBE8;
+    /* Texto oscuro */
+    --modal-text: #000000;
+    /* Botón de cerrar rojo oscuro */
+    --modal-close-button: #D8000C;
 }
 
 /* Custom Scroll Bar */
@@ -146,11 +153,17 @@ body {
 
 /* Ajusta el ancho y margen de cada slide */
 .swiper-slide {
-    width: 200px; /* Ancho reducido de cada slide */
-    box-sizing: border-box;
+    width: 300px; /* Ancho reducido de cada slide */
+    box-sizing: content-box;
     margin-right: 10px; /* Espacio reducido entre los slides */
     flex-shrink: 0; /* Evita que los slides se reduzcan */
+    cursor: grab;
 }
+
+.swiper-slide:active {
+    cursor: grabbing;
+}
+
 
 .products {
     display: flex;
@@ -202,7 +215,7 @@ body {
 
 .boton {
     border-radius: 8px;
-    padding: 6px 15px;
+    padding: 10px 20px;
     background-color: var(--main-color);
     border-color: rgb(226, 226, 255);
     color: var(--body-color);
@@ -324,6 +337,52 @@ header {
     font-size: 1.6rem;
 }
 
+
+/* Estilos para la alerta */
+.alert-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--modal-background); /* Fondo para éxito */
+    color: var(--modal-text);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    width: 80%; /* Ancho por defecto */
+    max-width: 600px; /* Máximo ancho */
+}
+
+.alert-container.show {
+    opacity: 1;
+}
+
+.alert-icon {
+    margin-right: 10px;
+    color: green;
+    font-size: 20px;
+}
+
+.alert-message {
+    flex: 1;
+}
+
+.alert-close {
+    background: none;
+    border: none;
+    color: var(--modal-close-button);
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+
 /* Responsive adjustments */
 @media (max-width: 1190px) {
     .navbar {
@@ -402,6 +461,18 @@ header {
         padding: 8px 16px;
         font-size: 16px;
     }
+
+    .alert-container {
+        width: 90%; /* Ajustar ancho en tablets y dispositivos más pequeños */
+        font-size: 16px; /* Ajustar tamaño de fuente */
+        top: 50px;
+    }
+    .alert-icon {
+        font-size: 18px;
+    }
+    .alert-close {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -411,6 +482,20 @@ header {
 
     .product-name {
         font-size: 12px;
+    }
+
+    .alert-container {
+        width: 90%; /* Ajustar ancho en dispositivos móviles */
+        padding: 10px; /* Ajustar padding */
+        font-size: 14px; /* Ajustar tamaño de fuente */
+    }
+    
+    .alert-icon {
+        font-size: 16px;
+    }
+
+    .alert-close {
+        font-size: 16px;
     }
 }
 
@@ -507,12 +592,6 @@ header {
         height: 250px;
     }
 }
-
-
-
-
-
-
 
 
 

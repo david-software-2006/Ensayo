@@ -13,7 +13,7 @@ body {
 
 header {
     width: 100%;
-    background: #005cb9;
+    background: #5F8DB5;
 }
 
 .header__barra--azul {
@@ -44,7 +44,7 @@ h1 {
     justify-content: space-evenly;
     flex-wrap: wrap;
     height: 40px;
-    width: 200px;
+    width: auto;
 }
 
 .botones__ingreso--login ,
@@ -406,21 +406,11 @@ a {
     .botones__ingreso {
         width: 100%;
         flex-direction: column;
-    }
-
-    .header__boton--login,
-    .header__boton--registro {
-        margin: 0px 5px 10px 0px;
-
-    }
-
-    .header__boton--login {
         margin-bottom: 10px;
     }
 
-    .header__boton--registro {
-        margin-bottom: 0;
-    }
+
+
 
     .tab-content {
         width: 100%;

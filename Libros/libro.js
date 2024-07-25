@@ -7,7 +7,10 @@ const conCategoría = [
     ['1', 'Entre cuento y cuento', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/ENTRE-CUENTO-Y-CUENTO.pdf', 'URL-video', '/Recursos/imagenes/libro9.webp'],
     ['3', 'Cuentos maravillosos', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/Cuentos-Maravillosos-4ta-Edicion.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
     ['4', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/cuentos-para-contar.pdf', 'URL-video', '/Recursos/imagenes/libro10.webp'],
-    ['', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/cuentos-para-contar.pdf', 'URL-video', '/Recursos/imagenes/libro10.webp'],
+    ['8', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/cuentos-para-contar.pdf', 'URL-video', '/Recursos/imagenes/libro10.webp'],
+    ['9', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/cuentos-para-contar.pdf', 'URL-video', '/Recursos/imagenes/libro11.webp'],
+    ['10', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/cuentos-para-contar.pdf', 'URL-video', '/Recursos/imagenes/libro11.webp'],
+
 
     // NIÑOS
     ['5', 'A que te cojo ratón', 'NIÑOS', 'URL-Spreaker', '/Recursos/PDFs/A-QUE-TE-COJO-RATON.pdf', 'URL-video', '/Recursos/imagenes/libro16.webp'],
@@ -38,32 +41,81 @@ function downloadPDF(pdfPath) {
     a.click();
     document.body.removeChild(a);
 }
+
+// Función para mostrar la alerta
+function showAlert(message) {
+    // Crear el contenedor de la alerta
+    const alertContainer = document.createElement('div');
+    alertContainer.classList.add('alert-container');
+
+    // Crear el icono de la alerta
+    const alertIcon = document.createElement('i');
+    alertIcon.classList.add('bx', 'bx-check-circle', 'alert-icon'); // Icono de éxito
+    alertContainer.appendChild(alertIcon);
+
+    // Crear el mensaje de la alerta
+    const alertMessage = document.createElement('div');
+    alertMessage.classList.add('alert-message');
+    alertMessage.textContent = message;
+    alertContainer.appendChild(alertMessage);
+
+    // Crear el botón de cerrar
+    const alertClose = document.createElement('button');
+    alertClose.classList.add('alert-close');
+    alertClose.innerHTML = '&times;';
+    alertClose.onclick = function() {
+        document.body.removeChild(alertContainer);
+    };
+    alertContainer.appendChild(alertClose);
+
+    // Agregar la alerta al body
+    document.body.appendChild(alertContainer);
+
+    // Mostrar la alerta con animación
+    setTimeout(function() {
+        alertContainer.classList.add('show');
+    }, 10);
+
+    // Ocultar y eliminar la alerta después de 3 segundos
+    setTimeout(function() {
+        alertContainer.classList.remove('show');
+        setTimeout(function() {
+            if (document.body.contains(alertContainer)) {
+                document.body.removeChild(alertContainer);
+            }
+        }, 500);
+    }, 4000);
+}
+
+
+
  
 // Función para guardar un libro en Guardados
 function saveBook(title, imagePath, pdfPath) {
     let savedBooks = JSON.parse(localStorage.getItem('savedBooks')) || [];
     if (savedBooks.some(book => book.title === title)) {
-        alert('Este libro ya está guardado en Guardados.');
+        showAlert('Este libro ya está guardado en Guardados.');
         return;
     }
     savedBooks.push({ title, image: imagePath, pdf: pdfPath });
     localStorage.setItem('savedBooks', JSON.stringify(savedBooks));
-    alert(`¡Libro "${title}" guardado exitosamente en Guardados!`);
+    showAlert(`¡Libro "${title}" guardado exitosamente en Guardados!`);
     updateBookIcons(); // Actualizar los íconos después de guardar
 }
- 
+
 // Función para agregar un libro a Perfil
 function addToProfile(title, imagePath, pdfPath) {
     let profileBooks = JSON.parse(localStorage.getItem('profileBooks')) || [];
     if (profileBooks.some(book => book.title === title)) {
-        alert('Este libro ya está guardado en Perfil.');
+        showAlert('Este libro ya está guardado en Perfil.');
         return;
     }
     profileBooks.push({ title, image: imagePath, pdf: pdfPath });
     localStorage.setItem('profileBooks', JSON.stringify(profileBooks));
-    alert(`¡Libro "${title}" agregado exitosamente en Favoritos!`);
+    showAlert(`¡Libro "${title}" agregado exitosamente en Favoritos!`);
     updateBookIcons(); // Actualizar los íconos después de agregar
 }
+
  
 function addBook(id, title, category, spreakerURL, pdfURL, videoURL, imageURL) {
     let categoryContainer = document.querySelector(`#${category.toLowerCase()}-books`);

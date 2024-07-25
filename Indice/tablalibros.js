@@ -1,11 +1,32 @@
 const url = '/Recursos/PDFs/'; // Ruta de la carpeta que contiene los archivos PDF.
 const conCategoría = [
-  ['1', 'CON LOS PELOS DE PUNTA', 'Historia', '', '/Recursos/PDFs/CON-LOS-PELOS-DE-PUNTA.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2023/12/Portada-Con-los-pelos-de-punta.webp'],
-  ['2', 'ERASE UNA VEZ EN COLOMBIA', 'Juegos', '', '/Recursos/PDFs/ERASE-UNA-VEZ-EN-COLOMBIA.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/Portada-Erase-una-vez-en-colombia.webp'],
-  ['3', 'TODO LO CONTRARIO', 'Adultos', '', '/Recursos/PDFs/TODO-LO-CONTRARIO.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/PORTADA-CONTRARIOS.webp'],
-  ['4', 'Cuentos para desenredar enredos', 'Adultos', '', '/Recursos/PDFs/cuentos-para-desenredar-enredos.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/PORTADA-ENREDOS.webp'],
-  ['5', 'Entre cuento y cuento', 'Niños', '', '/Recursos/PDFs/ENTRE-CUENTO-Y-CUENTO.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/Portada-Entre-cuento-y-cuento.webp'],
-  ['6', 'salud para contar', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', 'https://secretosparacontar.org/wp-content/uploads/2024/01/portada-Salud-para-contar.webp']
+  ['1', 'LECTURAS PARA TODOS LOS DIAS', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro.webp'],
+  ['2', 'LA CASA Y EL CAMPO', 'Historia', '', '/Recursos/PDFs/CON-LOS-PELOS-DE-PUNTA.pdf', '', '/Recursos/imagenes/libro1.webp'],
+  ['3', 'HISTORIAS Y LUGARES', 'Juegos', '', '/Recursos/PDFs/ERASE-UNA-VEZ-EN-COLOMBIA.pdf', '', '/Recursos/imagenes/libro2.webp'],
+  ['4', 'CUENTOS MARAVILLOSOS', 'Adultos', '', '/Recursos/PDFs/TODO-LO-CONTRARIO.pdf', '', '/Recursos/imagenes/libro3.webp'],
+  ['5', 'LOS VAIJES DEL VIEJO JACOBO', 'Adultos', '', '/Recursos/PDFs/cuentos-para-desenredar-enredos.pdf', '', '/Recursos/imagenes/libro4.webp'],
+  ['6', 'MÁS CLARO NO CANTA UN GALLO', 'Niños', '', '/Recursos/PDFs/ENTRE-CUENTO-Y-CUENTO.pdf', '', '/Recursos/imagenes/libro5.webp'],
+  ['7', 'LA TIERRA, EL CIELO Y MÁS ALLÁ', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro6.webp'],
+  ['8', 'CUENTOS PARA DESENREDAR ENREDOS', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro7.webp'],
+  ['9', 'TODO LO CONTRARIO', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro8.webp'],
+  ['10', 'ENTRE CUENTO Y CUENTO', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro9.webp'],
+  ['11', 'CUENTOS PARA CONTAR', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro10.webp'],
+  ['12', 'ÉRASE UNA VEZ EN COLOMBIA', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro11.webp'],
+  ['13', 'SALUD PARA CONTAR', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro12.webp'],
+  ['14', 'CON LOS PELOS DE PUNTA', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro13.webp'],
+  ['15', 'LOS SECRETOS DE LO ANIMALES', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro14.webp'],
+  ['16', 'DEL CAMPO A LA MESA', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro15.webp'],
+  ['17', 'A QUE TE COJO RATÓN', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro16.webp'],
+  ['18', 'LOS SECRETOS DE LAS PLANTAS', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro17.webp'],
+  ['19', 'LA FINCA VIVA', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro18.webp'],
+  ['20', 'TAN DISTINTOS Y PARIENTES', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro19.webp'],
+  ['21', 'TIEMPO DE HACER', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro20.webp'],
+  ['22', 'LOS PRIMEROS AÑOS', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro21.webp'],
+  ['23', 'LECTURAS FANTÁSTICAS', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro22.webp'],
+  ['24', 'CALOR DE HOGAR', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro23.webp'],
+  ['25', 'PLANETA VIVO', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro24.webp'],
+  ['26', 'CUENTOS Y PASATIEMPOS', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro25.webp'],
+  ['27', 'EL HOMBRE Y SU CULTURA', 'Adultos', '', '/Recursos/PDFs/SALUD-PARA-CONTAR-2024.pdf', '', '/Recursos/imagenes/libro26.webp']
 ];
 
 const table = document.getElementById("book-table");

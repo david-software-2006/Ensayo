@@ -29,24 +29,7 @@ function openPDF(pdfPath, title) {
     window.location.href = `/VerPdf/visor.html?pdf=${encodeURIComponent(pdfPath)}&title=${encodeURIComponent(title)}`;
 }
 
-function removeBook(title) {
-    let savedBooks = JSON.parse(localStorage.getItem('savedBooks')) || [];
-    savedBooks = savedBooks.filter(book => book.title !== title);
-    localStorage.setItem('savedBooks', JSON.stringify(savedBooks));
-    
-    // Eliminar el elemento del DOM
-    const booksContainer = document.getElementById('saved-books');
-    const bookElements = booksContainer.getElementsByClassName('product-card');
-    
-    // Buscar y eliminar el elemento correspondiente al libro eliminado
-    for (let i = 0; i < bookElements.length; i++) {
-        const bookName = bookElements[i].querySelector('.product-name').textContent;
-        if (bookName === title) {
-            booksContainer.removeChild(bookElements[i]);
-            break; // Terminar el bucle una vez encontrado y eliminado el libro
-        }
-    }
-}
+
 
 // Función para eliminar un libro de la lista de guardados
 function removeBook(title) {
@@ -74,6 +57,99 @@ function removeBook(title) {
         return;
     }
 }
+
+// Función para mostrar el modal de confirmación de eliminación
+function showConfirmDeleteModal(title) {
+    // Crear el contenedor del modal
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    // Crear el contenido del modal
+    const modalContent = document.createElement('div');
+    modalContent.classList.add('modal-content');
+
+    // Crear el botón de cerrar
+    const closeButton = document.createElement('span');
+    closeButton.classList.add('close-button');
+    closeButton.innerHTML = '&times;';
+    closeButton.onclick = function() {
+        document.body.removeChild(modal);
+    };
+
+    // Crear el mensaje del modal
+    const modalMessage = document.createElement('p');
+    modalMessage.textContent = `¿Estás seguro de eliminar "${title}" de tus libros guardados?`;
+
+    // Crear el botón de confirmar eliminación
+    const confirmDeleteButton = document.createElement('button');
+    confirmDeleteButton.classList.add('confirm-delete-button');
+    confirmDeleteButton.textContent = 'Eliminar';
+
+    // Crear el icono de papelera para el botón de confirmar eliminación
+    const deleteIcon = document.createElement('i');
+    deleteIcon.classList.add('bx', 'bxs-trash'); // Asegúrate de que 'bxs-trash' sea el nombre correcto para el icono de papelera en Boxicons
+
+    // Agregar el icono al final del texto del botón de confirmar eliminación
+    confirmDeleteButton.appendChild(deleteIcon);
+
+    confirmDeleteButton.onclick = function() {
+        // Proceder con la eliminación
+        let savedBooks = JSON.parse(localStorage.getItem('savedBooks')) || [];
+        savedBooks = savedBooks.filter(book => book.title !== title);
+        localStorage.setItem('savedBooks', JSON.stringify(savedBooks));
+        
+        // Eliminar el elemento del DOM
+        const booksContainer = document.getElementById('saved-books');
+        const bookElements = booksContainer.getElementsByClassName('product-card');
+        
+        // Buscar y eliminar el elemento correspondiente al libro eliminado
+        for (let i = 0; i < bookElements.length; i++) {
+            const bookName = bookElements[i].querySelector('.product-name').textContent;
+            if (bookName === title) {
+                booksContainer.removeChild(bookElements[i]);
+                break; // Terminar el bucle una vez encontrado y eliminado el libro
+            }
+        }
+        document.body.removeChild(modal); // Cerrar el modal
+    };
+
+    // Crear el botón de cancelar eliminación
+    const cancelDeleteButton = document.createElement('button');
+    cancelDeleteButton.classList.add('cancel-delete-button');
+    cancelDeleteButton.textContent = 'Cancelar';
+    cancelDeleteButton.onclick = function() {
+        document.body.removeChild(modal);
+    };
+
+    // Agregar elementos al contenido del modal
+    modalContent.appendChild(closeButton);
+    modalContent.appendChild(modalMessage);
+    modalContent.appendChild(confirmDeleteButton);
+    modalContent.appendChild(cancelDeleteButton);
+
+    // Crear el fondo del modal
+    const modalBackground = document.createElement('div');
+    modalBackground.classList.add('modal-background');
+    modalBackground.onclick = function() {
+        document.body.removeChild(modal);
+    };
+
+    // Agregar el contenido y el fondo al contenedor del modal
+    modal.appendChild(modalBackground);
+    modal.appendChild(modalContent);
+
+    // Agregar el modal al body
+    document.body.appendChild(modal);
+
+    // Mostrar el modal
+    modal.style.display = 'flex';
+}
+
+// Actualiza la llamada a removeBook para usar el modal de confirmación
+function removeBook(title) {
+    showConfirmDeleteModal(title);
+}
+
 
 
 // Filtrar libros en función del texto ingresado en la búsqueda

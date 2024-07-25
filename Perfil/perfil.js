@@ -142,31 +142,83 @@ function showFavoriteBooks() {
   });
 }
 
-// Función para eliminar un libro del perfil de favoritos
 function deleteBook(title) {
-  // Show confirmation dialog
-  if (confirm(`¿Estás seguro de eliminar "${title}" de tus favoritos?`)) {
-    // Proceed with deletion
-    let profileBooks = JSON.parse(localStorage.getItem('profileBooks')) || [];
+  // Crear el contenedor del modal
+  const modal = document.createElement('div');
+  modal.classList.add('modal');
 
-    // Find index of the book with the given title
-    const index = profileBooks.findIndex(book => book.title === title);
+  // Crear el contenido del modal
+  const modalContent = document.createElement('div');
+  modalContent.classList.add('modal-content');
 
-    if (index !== -1) {
-      // Remove the book from the array
-      profileBooks.splice(index, 1);
+  // Crear el botón de cerrar
+  const closeButton = document.createElement('span');
+  closeButton.classList.add('close-button');
+  closeButton.innerHTML = '&times;';
+  closeButton.onclick = function() {
+      document.body.removeChild(modal);
+  };
 
-      // Update localStorage
-      localStorage.setItem('profileBooks', JSON.stringify(profileBooks));
+  // Crear el mensaje del modal
+  const modalMessage = document.createElement('p');
+  modalMessage.textContent = `¿Estás seguro de eliminar "${title}" de tus favoritos?`;
 
-      // Update the UI to reflect the deletion
-      showFavoriteBooks();
-    }
-  } else {
-    // If user cancels deletion
-    return;
-  }
+  // Crear el botón de confirmar eliminación
+  const confirmDeleteButton = document.createElement('button');
+  confirmDeleteButton.classList.add('confirm-delete-button');
+  confirmDeleteButton.textContent = 'Eliminar';
+
+  // Crear el icono de papelera para el botón de confirmar eliminación
+  const deleteIcon = document.createElement('i');
+  deleteIcon.classList.add('bx', 'bxs-trash'); // Asegúrate de que 'bxs-trash' sea el nombre correcto para el icono de papelera en Boxicons
+
+  // Agregar el icono al final del texto del botón de confirmar eliminación
+  confirmDeleteButton.appendChild(deleteIcon);
+
+  confirmDeleteButton.onclick = function() {
+      let profileBooks = JSON.parse(localStorage.getItem('profileBooks')) || [];
+      const index = profileBooks.findIndex(book => book.title === title);
+      if (index !== -1) {
+          profileBooks.splice(index, 1);
+          localStorage.setItem('profileBooks', JSON.stringify(profileBooks));
+          showFavoriteBooks(); // Actualiza la vista después de eliminar el libro
+      }
+      document.body.removeChild(modal);
+  };
+
+  // Crear el botón de cancelar eliminación
+  const cancelDeleteButton = document.createElement('button');
+  cancelDeleteButton.classList.add('cancel-delete-button');
+  cancelDeleteButton.textContent = 'Cancelar';
+  cancelDeleteButton.onclick = function() {
+      document.body.removeChild(modal);
+  };
+
+  // Agregar elementos al contenido del modal
+  modalContent.appendChild(closeButton);
+  modalContent.appendChild(modalMessage);
+  modalContent.appendChild(confirmDeleteButton);
+  modalContent.appendChild(cancelDeleteButton);
+
+  // Agregar el contenido al contenedor del modal
+  modal.appendChild(modalContent);
+
+  // Agregar el modal al body
+  document.body.appendChild(modal);
+
+  // Mostrar el modal
+  modal.style.display = 'flex';
+
+  // Cerrar el modal al hacer clic fuera del contenido
+  window.onclick = function(event) {
+      if (event.target === modal) {
+          document.body.removeChild(modal);
+      }
+  };
 }
+
+
+
 
 
 // Llamar a showFavoriteBooks cuando la página se cargue por completo
