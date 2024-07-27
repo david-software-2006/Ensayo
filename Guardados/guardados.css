@@ -63,7 +63,7 @@ body.dark .product-card {
 
 
     /* Colores para el modal */
-    --modal-background: #FFEBE8;
+    --modal-background: #FFFFFF;
     /* Fondo rojo claro */
     --modal-text: #000000;
     /* Texto rojo oscuro */
@@ -323,6 +323,10 @@ body {
     height: 100px;
 }
 
+.logo1 {
+    display: none;
+}
+
 /* Media Queries */
 
 @media (max-width: 1545px) {
@@ -402,6 +406,19 @@ body {
 }
 
 @media (max-width: 550px) {
+    .logo {
+        display: none;
+    }
+
+    .logo1 {
+        display: block;
+    }
+
+    .logo1 img {
+        width: 100px;
+        height: 80px;
+    }
+    
     .footer-left,
     .footer-right {
         flex: 1 0 100%;

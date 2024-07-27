@@ -71,27 +71,27 @@ document.addEventListener("DOMContentLoaded", function() {
     // Función para obtener la URL del audio basado en el PDF
     function getAudioUrl(pdfUrl) {
         switch (pdfUrl) {
-            case '/Recursos/Pdfs/lectura.pdf':
+            case '/Recursos/PDFs/LECTURAS_PARA_TODOS_LOS_DIAS.pdf':
                 return 'https://open.spotify.com/embed/show/4pgUCRcRIQNKwPJBLMWxjP?utm_source=generator';
-            case '/Ejemplo/Pdfs/TODO-LO-CONTRARIO.pdf':
+            case '/Recursos/PDFs/TODO_LO_CONTRARIO.pdf':
                 return 'https://open.spotify.com/embed/episode/1Esnox0odDsbJgEXLcsE2Z?utm_source=generator';
-            case '/Ejemplo/Pdfs/la-finca-viva.pdf':
+            case '/Recursos/PDFs/LA_FINCA_VIVA.pdf':
                 return 'https://open.spotify.com/embed/episode/26RVsdvd8AEvvNfFYjTKpS?utm_source=generator';
-            case '/Ejemplo/Pdfs/cuentos-para-desenredar-enredos.pdf':
+            case '/Recursos/PDFs/CUENTOS_PARA_DESENREDAR_ENREDOS.pdf':
                 return 'https://open.spotify.com/embed/episode/53hWzLBrhZujbAJIuq8KIp?utm_source=generator';
-            case '/Ejemplo/Pdfs/planeta-vivo.pdf':
+            case '/Recursos/PDFs/PLANETA_VIVO.pdf':
                 return 'https://open.spotify.com/embed/episode/71E5TM7AKdnKft3JOETuB8?utm_source=generator';
-            case '/Ejemplo/Pdfs/el-hombre-y-su-cultura.pdf':
+            case '/Recursos/PDFs/EL_HOMBRE_Y_SU_CULTURA.pdf':
                 return 'https://open.spotify.com/embed/episode/0r3prjruJleDxbFtPmApfj?utm_source=generator';
-            case '/Ejemplo/Pdfs/cuentos-y-pasatiempos.pdf':
+            case '/Recursos/PDFs/CUENTOS_Y_PASATIEMPOS.pdf':
                 return 'https://open.spotify.com/embed/episode/2kxA7GaDj9eRjZEY2L817g?utm_source=generator';
-            case '/Ejemplo/Pdfs/la-casa-y-el-campo.pdf':
+            case '/Recursos/PDFs/LA_CASA_Y_EL_CAMPO.pdf':
                 return 'https://widget.spreaker.com/player?show_id=4421133&theme=light&playlist=show&playlist-continuous=true&chapters-image=true';
-            case '/Ejemplo/Pdfs/historias-y-lugares.pdf':
+            case '/Recursos/PDFs/HISTORIAS_Y_LUGARES.pdf':
                 return 'https://widget.spreaker.com/player?show_id=4671213&theme=light&playlist=show&playlist-continuous=true&chapters-image=true';
-            case '/Ejemplo/Pdfs/lecturas-para-todos-los-dias.pdf':
+            case '/Recursos/PDFs/LECTURAS_PARA_TODOS_LOS_DIAS.pdf':
                 return 'https://widget.spreaker.com/player?show_id=4421133&theme=light&playlist=show&playlist-continuous=true&chapters-image=true';
-            case '/Ejemplo/Pdfs/en-la-casa-de-doña-nana.pdf':
+            case '/Recursos/PDFs/EN_LA_CASA_DE_DONA_NANA.pdf':
                 return 'https://widget.spreaker.com/player?show_id=4421242&theme=light&playlist=show&playlist-continuous=true&chapters-image=true';
             default:
                 return null;

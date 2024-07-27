@@ -1,19 +1,75 @@
  // Define la ruta base de la carpeta que contiene los archivos PDF
- let url = '/Recursos/Pdfs/';
+ let url = '/Recursos/PDFs/';
  
  // Categorías y libros iniciales
  const conCategoría = [
      // CUENTO
-     ['1', 'Entre cuento y cuento', 'CUENTO', 'URL-Spreaker', '/Recursos/Pdfs/lectura.pdf', 'URL-video', '/Recursos/imagenes/libro9.webp'],
-     ['3', 'Cuentos maravillosos', 'CUENTO', 'URL-Spreaker', '/Recursos/Pdfs/Cuentos-Maravillosos-4ta-Edicion.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
-     ['4', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/Pdfs/cuentos-para-contar.pdf', 'URL-video', '/Recursos/imagenes/libro10.webp'],
- 
-     //NIÑOS
-     ['5', 'A que te cojo ratón', 'NIÑOS', 'URL-Spreaker', '/Recursos/Pdfs/A-QUE-TE-COJO-RATON.pdf', 'URL-video', '/Recursos/imagenes/libro16.webp'],
-     ['6', 'Cuentos y pasatiempos', 'NIÑOS', 'https://open.spotify.com/embed/episode/2kxA7GaDj9eRjZEY2L817g?utm_source=generator', '/Recursos/Pdfs/Cuentos-y-pasatiempos.pdf', 'URL-video', '/Recursos/imagenes/libro25.webp'],
-     ['7', 'Cuentos y maravillosos', 'NIÑOS', 'URL-Spreaker', '/Recursos/Pdfs/Cuentos-Maravillosos-4ta-Edicion.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
- 
-     //
+     ['1', 'Entre cuento y cuento', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/ENTRE_CUENTO_Y_CUENTO.pdf', 'URL-video', '/Recursos/imagenes/libro9.webp'],
+     ['2', 'Cuentos para desenredar enredos', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/CUENTOS_PARA_DESENREDAR_ENREDOS.pdf', 'URL-video', '/Recursos/imagenes/libro7.webp'],
+     ['3', 'Cuentos maravillosos', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/CUENTOS_MARAVILLOSOS.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
+     ['4', 'Cuentos para contar', 'CUENTO', 'URL-Spreaker', '/Recursos/PDFs/CUENTOS_PARA_CONTAR.pdf', 'URL-video', '/Recursos/imagenes/libro10.webp'],
+     ['5', 'Cuentos y pasatiempos', 'CUENTO', 'https://open.spotify.com/embed/episode/2kxA7GaDj9eRjZEY2L817g?utm_source=generator', '/Recursos/PDFs/CUENTOS_Y_PASATIEMPOS.pdf', 'URL-video', '/Recursos/imagenes/libro25.webp'],
+     ['6', 'Lecturas para todos los dias', 'CUENTO', 'https://open.spotify.com/embed/episode/2kxA7GaDj9eRjZEY2L817g?utm_source=generator', '/Recursos/PDFs/LECTURAS_PARA_TODOS_LOS_DIAS.pdf', 'URL-video', '/Recursos/imagenes/libro.webp'],
+
+     //ADULTOS
+     ['7', 'Érase una vez en Colombia', 'ADULTOS', 'URL-Spreaker', '/Recursos/PDFs/ERASE_UNA_VEZ_EN_COLOMBIA.pdf', 'URL-video', '/Recursos/imagenes/libro11.webp'],
+     ['8', 'Calor de hogar', 'ADULTOS', 'URL-Spreaker', '/Recursos/PDFs/CALOR_DE_HOGAR.pdf', 'URL-video', '/Recursos/imagenes/libro23.webp'],
+     ['9', 'Los primeros años', 'ADULTOS', 'URL-Spreaker', '/Recursos/PDFs/LOS_PRIMEROS_AÑOS.pdf', 'URL-video', '/Recursos/imagenes/libro21.webp'],
+     ['10', 'Del campo a la mesa', 'ADULTOS', 'URL-Spreaker', '/Recursos/PDFs/DEL_CAMPO_A_LA_MESA.pdf', 'URL-video', '/Recursos/imagenes/libro15.webp'],
+     ['11', 'Tiempo de hacer', 'ADULTOS', 'URL-Spreaker', '/Recursos/PDFs/TIEMPO_DE_HACER.pdf', 'URL-video', '/Recursos/imagenes/libro20.webp'],
+     ['12', 'Tan distintos y parientes', 'ADULTOS', 'URL-Spreaker', '/Recursos/PDFs/TAN_DISTINTOS_Y_PARIENTES.pdf', 'URL-video', '/Recursos/imagenes/libro19.webp'],
+     ['13', 'Todo lo contrario', 'ADULTOS', 'https://open.spotify.com/embed/episode/2kxA7GaDj9eRjZEY2L817g?utm_source=generator', '/Recursos/PDFs/TODO_LO_CONTRARIO.pdf', 'URL-video', '/Recursos/imagenes/libro8.webp'],
+     ['14', 'Con los pelos de punta', 'ADULTOS', 'https://open.spotify.com/embed/episode/2kxA7GaDj9eRjZEY2L817g?utm_source=generator', '/Recursos/PDFs/CON_LOS_PELOS_DE_PUNTA.pdf', 'URL-video', '/Recursos/imagenes/libro13.webp'],
+
+     //FAMILIA
+     ['15', 'Con los pelos de punta', 'FAMILIA', 'https://open.spotify.com/embed/episode/2kxA7GaDj9eRjZEY2L817g?utm_source=generator', '/Recursos/PDFs/CON_LOS_PELOS_DE_PUNTA.pdf', 'URL-video', '/Recursos/imagenes/libro13.webp'],
+     ['16', 'La Tierra, el cielo y más allá', 'FAMILIA', 'URL-Spreaker', '/Recursos/PDFs/LA_TIERRA_EL_CIELO_Y_MAS_ALLA.pdf', 'URL-video', '/Recursos/imagenes/libro6.webp'],
+     ['17', 'Todo lo contrario', 'FAMILIA', 'https://open.spotify.com/embed/episode/2kxA7GaDj9eRjZEY2L817g?utm_source=generator', '/Recursos/PDFs/TODO_LO_CONTRARIO.pdf', 'URL-video', '/Recursos/imagenes/libro8.webp'],
+     ['18', 'Del campo a la mesa', 'FAMILIA', 'URL-Spreaker', '/Recursos/PDFs/DEL_CAMPO_A_LA_MESA.pdf', 'URL-video', '/Recursos/imagenes/libro15.webp'],
+     ['19', 'Tiempo de hacer', 'FAMILIA', 'URL-Spreaker', '/Recursos/PDFs/TIEMPO_DE_HACER.pdf', 'URL-video', '/Recursos/imagenes/libro20.webp'],
+     ['20', 'Tan distintos y parientes', 'FAMILIA', 'URL-Spreaker', '/Recursos/PDFs/TAN_DISTINTOS_Y_PARIENTES.pdf', 'URL-video', '/Recursos/imagenes/libro19.webp'],
+     ['21', 'Más claro no canta un gallo', 'FAMILIA', 'URL-Spreaker', '/Recursos/PDFs/MAS_CLARO_NO_CANTA_UN_GALLO.pdf', 'URL-video', '/Recursos/imagenes/libro5.webp'],
+     ['22', 'Calor de hogar', 'FAMILIA', 'URL-Spreaker', '/Recursos/PDFs/CALOR_DE_HOGAR.pdf', 'URL-video', '/Recursos/imagenes/libro23.webp'],
+     ['23', 'Los primeros años', 'FAMILIA', 'URL-Spreaker', '/Recursos/PDFs/LOS_PRIMEROS_AÑOS.pdf', 'URL-video', '/Recursos/imagenes/libro21.webp'],
+
+     //ADOLESCENTES
+     ['24', 'Planeta vivo', 'ADOLESCENTES', 'URL-Spreaker', '/Recursos/PDFs/PLANETA_VIVO.pdf', 'URL-video', '/Recursos/imagenes/libro24.webp'],
+     ['25', 'Los secretos de los animales', 'ADOLESCENTES', 'URL-Spreaker', '/Recursos/PDFs/LOS_SECRETOS_DE_LOS_ANIMALES.pdf', 'URL-video', '/Recursos/imagenes/libro14.webp'],
+     ['26', 'Salud para contar', 'ADOLESCENTES', 'URL-Spreaker', '/Recursos/PDFs/SALUD_PARA_CONTAR.pdf', 'URL-video', '/Recursos/imagenes/libro12.webp'],
+     ['27', 'Lecturas fantásticas', 'ADOLESCENTES', 'URL-Spreaker', '/Recursos/PDFs/LITERATURA_FANTASTICA.pdf', 'URL-video', '/Recursos/imagenes/libro22.webp'],
+     ['28', 'Historias y lugares', 'ADOLESCENTES', 'URL-Spreaker', '/Recursos/PDFs/HISTORIAS_Y_LUGARES.pdf', 'URL-video', '/Recursos/imagenes/libro2.webp'],
+     
+     //HISTORIA
+     ['29', 'Érase una vez en Colombia', 'HISTORIA', 'URL-Spreaker', '/Recursos/PDFs/ERASE_UNA_VEZ_EN_COLOMBIA.pdf', 'URL-video', '/Recursos/imagenes/libro11.webp'],
+     ['30', 'Los viajes del viejo Jacobo', 'HISTORIA', 'URL-Spreaker', '/Recursos/PDFs/LOS_VIAJES_DEL_VIEJO_JACOBO.pdf', 'URL-video', '/Recursos/imagenes/libro4.webp'],
+     ['31', 'Lecturas fantásticas', 'HISTORIA', 'URL-Spreaker', '/Recursos/PDFs/LITERATURA_FANTASTICA.pdf', 'URL-video', '/Recursos/imagenes/libro22.webp'],
+     ['32', 'Historias y lugares', 'HISTORIA', 'URL-Spreaker', '/Recursos/PDFs/HISTORIAS_Y_LUGARES.pdf', 'URL-video', '/Recursos/imagenes/libro2.webp'],
+
+     //JOVENES
+     ['33', 'La Tierra, el cielo y más allá', 'JOVENES', 'URL-Spreaker', '/Recursos/PDFs/LA_TIERRA_EL_CIELO_Y_MAS_ALLA.pdf', 'URL-video', '/Recursos/imagenes/libro6.webp'],
+     ['34', 'Los viajes del viejo Jacobo', 'JOVENES', 'URL-Spreaker', '/Recursos/PDFs/LOS_VIAJES_DEL_VIEJO_JACOBO.pdf', 'URL-video', '/Recursos/imagenes/libro4.webp'],
+     ['35', 'Los secretos de las plantas', 'JOVENES', 'URL-Spreaker', '/Recursos/PDFs/LOS_SECRETOS_DE_LAS_PLANTAS.pdf', 'URL-video', '/Recursos/imagenes/libro17.webp'],
+     ['36', 'La finca viva', 'JOVENES', 'URL-Spreaker', '/Recursos/PDFs/LA_FINCA_VIVA.pdf', 'URL-video', '/Recursos/imagenes/libro18.webp'],
+     ['37', 'La casa y el campo', 'JOVENES', 'URL-Spreaker', '/Recursos/PDFs/LA_CASA_Y_EL_CAMPO.pdf', 'URL-video', '/Recursos/imagenes/libro1.webp'],
+     
+    //PLANTAS
+    ['38', 'La casa y el campo', 'PLANTAS', 'URL-Spreaker', '/Recursos/PDFs/LA_CASA_Y_EL_CAMPO.pdf', 'URL-video', '/Recursos/imagenes/libro1.webp'],
+    ['39', 'Los secretos de las plantas', 'PLANTAS', 'URL-Spreaker', '/Recursos/PDFs/LOS_SECRETOS_DE_LAS_PLANTAS.pdf', 'URL-video', '/Recursos/imagenes/libro17.webp'],
+    ['40', 'La finca viva', 'PLANTAS', 'URL-Spreaker', '/Recursos/PDFs/LA_FINCA_VIVA.pdf', 'URL-video', '/Recursos/imagenes/libro18.webp'],
+
+    //CULTURA
+    ['41', 'El hombre y su cultura', 'CULTURA', 'URL-Spreaker', '/Recursos/PDFs/EL_HOMBRE_Y_SU_CULTURA.pdf', 'URL-video', '/Recursos/imagenes/libro26.webp'],
+    ['42', 'Érase una vez en Colombia', 'CULTURA', 'URL-Spreaker', '/Recursos/PDFs/ERASE_UNA_VEZ_EN_COLOMBIA.pdf', 'URL-video', '/Recursos/imagenes/libro11.webp'],
+    ['43', 'Los viajes del viejo Jacobo', 'CULTURA', 'URL-Spreaker', '/Recursos/PDFs/LOS_VIAJES_DEL_VIEJO_JACOBO.pdf', 'URL-video', '/Recursos/imagenes/libro4.webp'],
+
+    //NIÑOS
+    ['44', 'A qué te cojo ratón', 'NIÑOS', 'URL-Spreaker', '/Recursos/PDFs/A_QUE_TE_COJO_RATON.pdf', 'URL-video', '/Recursos/imagenes/libro16.webp'],
+    ['45', 'Cuentos maravillosos', 'NIÑOS', 'URL-Spreaker', '/Recursos/PDFs/CUENTOS_MARAVILLOSOS.pdf', 'URL-video', '/Recursos/imagenes/libro3.webp'],
+    ['46', 'Cuentos y pasatiempos', 'NIÑOS', 'https://open.spotify.com/embed/episode/2kxA7GaDj9eRjZEY2L817g?utm_source=generator', '/Recursos/PDFs/CUENTOS_Y_PASATIEMPOS.pdf', 'URL-video', '/Recursos/imagenes/libro25.webp'],
+    ['47', 'Cuentos para contar', 'NIÑOS', 'URL-Spreaker', '/Recursos/PDFs/CUENTOS_PARA_CONTAR.pdf', 'URL-video', '/Recursos/imagenes/libro10.webp'],
+    ['48', 'Más claro no canta un gallo', 'NIÑOS', 'URL-Spreaker', '/Recursos/PDFs/MAS_CLARO_NO_CANTA_UN_GALLO.pdf', 'URL-video', '/Recursos/imagenes/libro5.webp'],
+
+
  ];
  
  // Array de nuevos libros a agregar

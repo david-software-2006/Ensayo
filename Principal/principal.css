@@ -187,6 +187,10 @@ header {
     width: auto;
 }
 
+.logo1 {
+    display: none;
+}
+
 
 .search-box {
     max-width: 240px;
@@ -917,6 +921,19 @@ box-shadow: var(--hover-color) 0px 1px 25px;
 }
 
 @media (max-width: 550px) {
+    .logo {
+        display: none;
+    }
+
+    .logo1 {
+        display: block;
+    }
+
+    .logo1 img {
+        width: 100px;
+        height: 80px;
+    }
+    
     .services {
         margin-top: 30px;
     }

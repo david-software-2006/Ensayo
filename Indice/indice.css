@@ -260,7 +260,7 @@
   padding: 20px 0;
   font-family: "Be Vietnam Pro", sans-serif;
   border-top: 2px solid #dee2e6;
-  margin-top: 200px;
+  margin-top: 240px;
 }
 
 
@@ -339,6 +339,10 @@
 .logo__blanco {
   width: 100px;
   height: 100px;
+}
+
+.logo1 {
+  display: none;
 }
 
 /* Media Queries */
@@ -553,6 +557,21 @@
     .container {
       top: 240px;
     }
+  }
+
+  @media(max-width: 550px) {
+    .logo {
+      display: none;
+  }
+
+  .logo1 {
+      display: block;
+  }
+
+  .logo1 img {
+      width: 100px;
+      height: 80px;
+  }
   }
 
 
