@@ -45,6 +45,25 @@
      ['31', 'Lecturas fantásticas', 'HISTORIA', 'URL-Spreaker', '/Recursos/PDFs/LITERATURA_FANTASTICA.pdf', 'URL-video', '/Recursos/imagenes/libro22.webp'],
      ['32', 'Historias y lugares', 'HISTORIA', 'URL-Spreaker', '/Recursos/PDFs/HISTORIAS_Y_LUGARES.pdf', 'URL-video', '/Recursos/imagenes/libro2.webp'],
 
+     //RECONOCER
+     ['', 'Guía para el fortalecimiento de las bases de los aprendizajes en los primeros años', 'RECONOCER', 'URL-Spreaker', '/Recursos/PDFs/RECONOCER_1.pdf', 'URL-video', '/Recursos/imagenes/libro30.webp'],
+     ['', 'Guía para el fortalecimiento de las bases de los aprendizajes en los primeros años escolares', 'RECONOCER', 'URL-Spreaker', '/Recursos/PDFs/RECONOCER_2.pdf', 'URL-video', '/Recursos/imagenes/libro32.webp'],
+     ['', 'Guía complementarias para ciencias naturales, sociales, lenguaje, razonamiento y cognición', 'RECONOCER', 'URL-Spreaker', '/Recursos/PDFs/RECONOCER_5_y_6.pdf', 'URL-video', '/Recursos/imagenes/libro29.webp'],
+     ['', 'Manual complementario de ética, valores humanos y educación ambiental', 'RECONOCER', 'URL-Spreaker', '/Recursos/PDFs/RECONOCER_7.pdf', 'URL-video', '/Recursos/imagenes/libro28.webp'],
+     ['', 'Manual complementario de literatura, ciencias sociales y salud', 'RECONOCER', 'URL-Spreaker', '/Recursos/PDFs/RECONOCER_8.pdf', 'URL-video', '/Recursos/imagenes/libro27.webp'],
+     ['', 'Lecturas y actividades para compartir en familia', 'RECONOCER', 'URL-Spreaker', '/Recursos/PDFs/PLAN_LECTOR.pdf', 'URL-video', '/Recursos/imagenes/libro34.webp'],
+     ['', 'Lecturas y actividades para compartir en familia bachillerato', 'RECONOCER', 'URL-Spreaker', '/Recursos/PDFs/PLAN_LECTOR_BACHILLERATO.pdf', 'URL-video', '/Recursos/imagenes/libro31.webp'],
+
+     //GUÍA DE TALLERES
+     ['', 'Guía de talleres 1', 'GUÍA_DE_TALLERES', 'URL-Spreaker', '/Recursos/PDFs/GUIA_DE_TALLERES_1.pdf', 'URL-video', '/Recursos/imagenes/libro40.webp'],
+     ['', 'Guía de talleres 2', 'GUÍA_DE_TALLERES', 'URL-Spreaker', '/Recursos/PDFs/GUIA_DE_TALLERES_2.pdf', 'URL-video', '/Recursos/imagenes/libro38.webp'],
+     ['', 'Guía de talleres 2 planeta vivo', 'GUÍA_DE_TALLERES', 'URL-Spreaker', '/Recursos/PDFs/GUIA_DE_TALLERES_2_PLANETA.pdf', 'URL-video', '/Recursos/imagenes/libro41.webp'],
+     ['', 'El palabrero', 'GUÍA_DE_TALLERES', 'URL-Spreaker', '/Recursos/PDFs/EL_PALABRERO.pdf', 'URL-video', '/Recursos/imagenes/libro33.webp'],
+     ['', 'Guía de talleres 3', 'GUÍA_DE_TALLERES', 'URL-Spreaker', '/Recursos/PDFs/GUIA_DE_TALLERES_3.pdf', 'URL-video', '/Recursos/imagenes/libro37.webp'],
+     ['', 'Guía de talleres 4', 'GUÍA_DE_TALLERES', 'URL-Spreaker', '/Recursos/PDFs/GUIA_DE_TALLERES_4.pdf', 'URL-video', '/Recursos/imagenes/libro36.webp'],
+     ['', 'Guía de talleres 5', 'GUÍA_DE_TALLERES', 'URL-Spreaker', '/Recursos/PDFs/GUIA_DE_TALLERES_5.pdf', 'URL-video', '/Recursos/imagenes/libro39.webp'],
+     ['', 'Guía de talleres 6', 'GUÍA_DE_TALLERES', 'URL-Spreaker', '/Recursos/PDFs/GUIA_DE_TALLERES_6.pdf', 'URL-video', '/Recursos/imagenes/libro35.webp'],
+
      //JOVENES
      ['33', 'La Tierra, el cielo y más allá', 'JOVENES', 'URL-Spreaker', '/Recursos/PDFs/LA_TIERRA_EL_CIELO_Y_MAS_ALLA.pdf', 'URL-video', '/Recursos/imagenes/libro6.webp'],
      ['34', 'Los viajes del viejo Jacobo', 'JOVENES', 'URL-Spreaker', '/Recursos/PDFs/LOS_VIAJES_DEL_VIEJO_JACOBO.pdf', 'URL-video', '/Recursos/imagenes/libro4.webp'],
@@ -68,7 +87,6 @@
     ['46', 'Cuentos y pasatiempos', 'NIÑOS', 'https://open.spotify.com/embed/episode/2kxA7GaDj9eRjZEY2L817g?utm_source=generator', '/Recursos/PDFs/CUENTOS_Y_PASATIEMPOS.pdf', 'URL-video', '/Recursos/imagenes/libro25.webp'],
     ['47', 'Cuentos para contar', 'NIÑOS', 'URL-Spreaker', '/Recursos/PDFs/CUENTOS_PARA_CONTAR.pdf', 'URL-video', '/Recursos/imagenes/libro10.webp'],
     ['48', 'Más claro no canta un gallo', 'NIÑOS', 'URL-Spreaker', '/Recursos/PDFs/MAS_CLARO_NO_CANTA_UN_GALLO.pdf', 'URL-video', '/Recursos/imagenes/libro5.webp'],
-
 
  ];
  

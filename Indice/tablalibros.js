@@ -26,7 +26,23 @@ const conCategoría = [
   ['24', 'CALOR DE HOGAR', 'Adultos', '', '/Recursos/PDFs/CALOR_DE_HOGAR.pdf', '', '/Recursos/imagenes/libro23.webp'],
   ['25', 'PLANETA VIVO', 'Adultos', '', '/Recursos/PDFs/PLANETA_VIVO.pdf', '', '/Recursos/imagenes/libro24.webp'],
   ['26', 'CUENTOS Y PASATIEMPOS', 'Adultos', '', '/Recursos/PDFs/CUENTOS_Y_PASATIEMPOS.pdf', '', '/Recursos/imagenes/libro25.webp'],
-  ['27', 'EL HOMBRE Y SU CULTURA', 'Adultos', '', '/Recursos/PDFs/EL_HOMBRE_Y_SU_CULTURA.pdf', '', '/Recursos/imagenes/libro26.webp']
+  ['27', 'EL HOMBRE Y SU CULTURA', 'Adultos', '', '/Recursos/PDFs/EL_HOMBRE_Y_SU_CULTURA.pdf', '', '/Recursos/imagenes/libro26.webp'],
+  ['28', 'GUÍA PARA EL FORTALECIMINETO DE LAS BASES DE LOS APRENDIZAJES EN LOS PRIMEROS AÑOS', 'Adultos', '', '/Recursos/PDFs/RECONOCER_1.pdf', '', '/Recursos/imagenes/libro30.webp'],
+  ['29', 'GUÍA PARA EL FORTALECIMINETO DE LAS BASES DE LOS APRENDIZAJES EN LOS PRIMEROS AÑOS ESCOLARES', 'Adultos', '', '/Recursos/PDFs/RECONOCER_2.pdf', '', '/Recursos/imagenes/libro32.webp'],
+  ['30', 'GUÍA COMPLEMENTARIA PARA CIENCIAS NATURALES, SOCIALES, LENGUAJE, RAZONAMIENTO Y COGNICIÓN', 'Adultos', '', '/Recursos/PDFs/RECONOCER_5_Y_6.pdf', '', '/Recursos/imagenes/libro29.webp'],
+  ['31', 'MANUAL COMPLEMENTARIO DE ÉTICA, VALORES HUMANOS Y EDUCACIÓN AMBIENTAL', 'Adultos', '', '/Recursos/PDFs/RECONOCER_7.pdf', '', '/Recursos/imagenes/libro28.webp'],
+  ['32', 'MANUAL COMPLEMENTARIO DE LITERATURA, CIENCIAS SOCIALES Y SALUD', 'Adultos', '', '/Recursos/PDFs/RECONOCER_8.pdf', '', '/Recursos/imagenes/libro27.webp'],
+  ['33', 'LECTURAS Y ACTIVIDADES PARA COMPARTIR EN FAMILIA', 'Adultos', '', '/Recursos/PDFs/PLAN_LECTOR.pdf', '', '/Recursos/imagenes/libro34.webp'],
+  ['34', 'LECTURAS Y ACTIVIDADES PARA COMPARTIR EN FAMILIA BACHILLERATO', 'Adultos', '', '/Recursos/PDFs/PLAN_LECTOR_BACHILLERATO.pdf', '', '/Recursos/imagenes/libro31.webp'],
+  ['35', 'GUÍA DE TALLERES 1', 'Adultos', '', '/Recursos/PDFs/GUIA_DE_TALLERES_1.pdf', '', '/Recursos/imagenes/libro40.webp'],
+  ['36', 'GUÍA DE TALLERES 2', 'Adultos', '', '/Recursos/PDFs/GUIA_DE_TALLERES_2.pdf', '', '/Recursos/imagenes/libro38.webp'],
+  ['37', 'GUÍA DE TALLERES 2 PLANETA VIVO', 'Adultos', '', '/Recursos/PDFs/GUIA_DE_TALLERES_2_PLANETA.pdf', '', '/Recursos/imagenes/libro41.webp'],
+  ['38', 'GUÍA DE TALLERES 3', 'Adultos', '', '/Recursos/PDFs/GUIA_DE_TALLERES_3.pdf', '', '/Recursos/imagenes/libro37.webp'],
+  ['39', 'GUÍA DE TALLERES 4', 'Adultos', '', '/Recursos/PDFs/GUIA_DE_TALLERES_4.pdf', '', '/Recursos/imagenes/libro36.webp'],
+  ['40', 'GUÍA DE TALLERES 5', 'Adultos', '', '/Recursos/PDFs/GUIA_DE_TALLERES_5.pdf', '', '/Recursos/imagenes/libro39.webp'],
+  ['41', 'GUÍA DE TALLERES 6', 'Adultos', '', '/Recursos/PDFs/GUIA_DE_TALLERES_6.pdf', '', '/Recursos/imagenes/libro35.webp'],
+  ['42', 'EL PALABRERO', 'Adultos', '', '/Recursos/PDFs/EL_PALABRERO.pdf', '', '/Recursos/imagenes/libro33.webp'],
+
 ];
 
 const table = document.getElementById("book-table");
