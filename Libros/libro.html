@@ -7,7 +7,9 @@
     <title>Libros</title>
     <link rel="stylesheet" href="/Libros/libro.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/be6261ecc3.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
@@ -21,21 +23,24 @@
         <!--Nav-->
         <div class="nav container1">
             <!--Logo-->
-            <a href="/principal.html" class="logo"><img src="/Recursos/Imagenes/20-blanco.png" alt="Secretos para contar 20 años"></a>
+            <a href="/principal.html" class="logo"><img src="/Recursos/Imagenes/SPC_Horizontal_Color.png" alt="Secretos para contar 20 años"></a>
+            <a href="/principal.html" class="logo1"><img src="/Recursos/Imagenes/20-blanco.png" alt="Secretos para contar 20 años"></a>
 
             <!--Search Box-->
             <div class="search-box">
-                <input class="search" type="search" name="" id="search-input" placeholder="Search Book">
+                <input class="search" type="search" name="" id="search-input" placeholder="Buscar libros">
                 <i class='bx bx-search'></i>
             </div>
 
             <!--User-->
             <a href="/Perfil/Perfil.html" class="user">
-                <img src="/Recursos/Imagenes/user.jpg" alt="user" class="user-img">
+
+                <img src="/Recursos/Imagenes/usuario.png" alt="user" class="user-img">
+
             </a>
 
-             <!--Nav Bar-->
-             <div class="navbar">
+            <!--Nav Bar-->
+            <div class="navbar">
                 <a href="/principal.html" class="nav-link nav-active">
                     <i class='bx bx-home'></i>
                     <span class="nav-link-title">Principal</span>
@@ -46,16 +51,16 @@
                     <span class="nav-link-title">Perfil</span>
                 </a>
 
-
                 <!-- <a href="#movies" class="nav-link">
                     <i class='bx bx-compass'></i>
                     <span class="nav-link-title">Explore</span>
                 </a> -->
 
-                <a href="/testPDF-main/Waos/waos.html" class="nav-link">
+                <a href="/Indice/indice.html" class="nav-link">
                     <i class='bx bx-list-ul'></i>
                     <span class="nav-link-title">Indice</span>
                 </a>
+
 
                 <a href="/Libros/libro.html" class="nav-link">
                     <i class='bx bx-book-bookmark'></i>
@@ -72,11 +77,14 @@
 
     <div class="container">
         <h1 class="section-title">LIBROS</h1>
-        <div class="category scrollable-container">
-            <div id="listalibros"></div> <!-- Este es el contenedor donde se agregarán los libros -->
+        <div class="category">
+            <div class="scrollable-container">
+                <div id="listalibros"></div>
+            </div>
         </div>
         <div id="search-results" class="search-results hidden"></div>
     </div>
+    
     
     <!-- <div class="container">
         <h1 class="section-title">LIBROS</h1>
@@ -206,7 +214,41 @@
         <!-- Añadir más tarjetas si es necesario -->
     <!-- </div> -->
 
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>Contáctenos</p>
+                <a href="mailto:info@secretosparacontar.org">info@secretosparacontar.org</a>
+                <p>Tel: (57) 604 322 06 90</p>
+                <p>Trabaja con nosotros</p>
+                <p>Calle 11A #43B - 41, Barrio Manila, Medellín, Colombia</p>
+            </div>
+            <div class="footer-right">
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/secretosparacontar?mibextid=ZbWKwL" target="_blank"><i
+                                class='bx bxl-facebook-circle'></i></a></li>
+                    <li><a href="https://www.instagram.com/secretosparacontar?igsh=emE1MGUyZ2dpMXl0" target="_blank"><i
+                                class='bx bxl-instagram'></i></a></li>
+                    <li><a href="mailto:secretosparacontar@gmail.com" target="_blank"><i class='bx bx-envelope'></i></a>
+                    </li>
+                    <li><a href="https://wa.me/+576043220690" target="_blank"><i class='bx bxl-whatsapp'></i></a></li>
+                    <li><a href="https://www.youtube.com/c/FundaciónSecretosparaContar" target="_blank"><i
+                                class='bx bxl-youtube'></i></a></li>
+                    <li><img src="/Recursos/Imagenes/lions.png" alt="lions" class="lions"></li>
+                </ul>
+                <div class="footer-logo">
+                    <img src="/Recursos/Imagenes/logo-blanco.webp" alt="Logo blanco" class="logo__blanco">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Política de privacidad y protección de datos personales</p>
+            <p>© Todos los derechos reservados</p>
+        </div>
+    </footer>
+
     <script src="/Libros/libro.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/Perfil/oscuro.js"></script>
 
 </body>

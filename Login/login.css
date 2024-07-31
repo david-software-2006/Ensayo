@@ -11,20 +11,6 @@ body {
 }
 
 
-body.dark {
-    background-color: #2e2e2e;
-    color: #ffffff;
-}
-
-body.dark .container {
-    background-color: #444444;
-}
-
-.toggle {
-    display: none;
-}
-
-
 .login-container {
     background: linear-gradient(to bottom, #5F8DB5, #4285F4);
     border-radius: 1rem;
@@ -142,7 +128,7 @@ body.dark .container {
     text-decoration: none;
 }
 
-.login-footer a:hover {
+.login-footer a {
     text-decoration: underline;
 }
 
@@ -154,6 +140,6 @@ body.dark .container {
     text-decoration: none;
 }
 
-.recover-password:hover {
+.recover-password {
     text-decoration: underline;
 }

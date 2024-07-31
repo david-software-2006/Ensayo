@@ -184,7 +184,11 @@ header {
 
 .logo img {
     height: 100px;
-    width: 130px;
+    width: auto;
+}
+
+.logo1 {
+    display: none;
 }
 
 
@@ -202,6 +206,7 @@ header {
 
 .search-box .bx {
     font-size: 1.1rem;
+    color: var(--text-color);
 }
 
 .search-box .bx:hover {
@@ -260,8 +265,8 @@ header {
 
 /* Home */
 
-section {
-    padding: 70px 14% 60px;
+section{
+    padding: 3rem 0 2rem;
 }
 
 .home {
@@ -274,6 +279,13 @@ section {
     gap: 2rem;
     margin-top: 200px;
     margin-bottom: 150px;
+}
+
+.container-home {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+    margin-top: 200px;
 }
 
 .home-img img {
@@ -437,7 +449,7 @@ header.sticky {
 .row {
     position: relative;
     height: 600px;
-    padding: 50px 50px 40px;
+    padding: 30px 30px 40px;
     background: var(--other-color);
     border-radius: 3rem;
 }
@@ -909,6 +921,19 @@ box-shadow: var(--hover-color) 0px 1px 25px;
 }
 
 @media (max-width: 550px) {
+    .logo {
+        display: none;
+    }
+
+    .logo1 {
+        display: block;
+    }
+
+    .logo1 img {
+        width: 100px;
+        height: 80px;
+    }
+    
     .services {
         margin-top: 30px;
     }
@@ -957,6 +982,7 @@ box-shadow: var(--hover-color) 0px 1px 25px;
     .home {
         height: 110vh;
         gap: 0.1rem;
+        margin-top: 200px;
     }
 
     .btn2 {

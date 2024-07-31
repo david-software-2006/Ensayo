@@ -7,6 +7,7 @@
     <!--Link to CSS-->
     <link rel="stylesheet" href="/Inicio/inicio.css">
     <!--Link to FONT AWESOME-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!--Fav Icon-->
     <link rel="shortcut icon" href="/Recursos/Imagenes/favicon.webp" type="image/x-icon">
@@ -33,8 +34,8 @@
 
             <!--Buttons Box-->
             <div class="botones__ingreso">
-                <a href="/Login/index.html" class="botones__ingreso--login">Log in</a>
-                <a href="/Registro/index.html" class="botones__ingreso--registro">Registro</a>
+                <a href="/Login/login.html" class="botones__ingreso--login">Log in</a>
+                <a href="/Registro/registro.html" class="botones__ingreso--registro">Registro</a>
             </div>
         </div>
     </header>
@@ -75,41 +76,57 @@
                     <button class="tab-button active" data-tab="product">Leer</button>
                     <button class="tab-button" data-tab="services">Escuchar</button>
                     <button class="tab-button" data-tab="playground">Guardar</button>
-                    <button class="tab-button" data-tab="content">Ver</button>
+                    <button class="tab-button" data-tab="content">Libros</button>
                     <button class="tab-button" data-tab="random">Progreso</button>
                 </div>
 
                 <!--Image Preview 1-->
                 <div class="tab-content active" id="product">
                     <p>Libros leidos</p>
-                    <img src="/Recursos/Imagenes/Secretos-en-red-inicio.webp" alt="dummy image" class="dummy-image">
-                </div>
+                    <div class="responsive-image">
+                      <img src="/Recursos/Imagenes/leer.png" alt="dummy image" class="dummy-image">
+                      <img src="/Recursos/Imagenes/leer-tablet.png" alt="dummy image" class="dummy-image-tablet">
+                      <img src="/Recursos/Imagenes/leer-cel.png" alt="dummy image" class="dummy-image-cel">
+                    </div>
+                  </div>
 
                 <!--Image Preview 2-->
                 <div class="tab-content" id="services">
                     <p>Escuchar libro</p>
-                    <img src="/Recursos/Imagenes/BIMBO.png" alt="dummy image" class="dummy-image">
+                    <div class="responsive-image">
+                    <img src="/Recursos/Imagenes/Escuchar.png" alt="dummy image" class="dummy-image">
+                    <img src="/Recursos/Imagenes/Escuchar-tablet.png" alt="dummy image" class="dummy-image-tablet">
+                    <img src="/Recursos/Imagenes/Escuchar-cel.png" alt="dummy image" class="dummy-image-cel">
+                    </div>
                 </div>
 
                 <!--Image Preview 3-->
                 <div class="tab-content" id="playground">
                     <p>Lista de guardados</p>
-                    <img src="/Recursos/Imagenes/NUTRESA.png" alt="dummy image" class="dummy-image">
+                    <div class="responsive-image">
+                    <img src="/Recursos/Imagenes/Guardar.png" alt="dummy image" class="dummy-image">
+                    <img src="/Recursos/Imagenes/Guardar-tablet.png" alt="dummy image" class="dummy-image-tablet">
+                    <img src="/Recursos/Imagenes/Guardar-cel.png" alt="dummy image" class="dummy-image-cel">
+                    </div>
                 </div>
 
                 <!--Image Preview 4-->
                 <div class="tab-content" id="content">
                     <p>Ver libros</p>
-                    <img src="/Recursos/Imagenes/BIMBO.png" alt="dummy image" class="dummy-image">
+                    <img src="/Recursos/Imagenes/libros.png" alt="dummy image" class="dummy-image">
+                    <img src="/Recursos/Imagenes/libros-tablet.png" alt="dummy image" class="dummy-image-tablet">
+                    <img src="/Recursos/Imagenes/libros-cel.png" alt="dummy image" class="dummy-image-cel">
                 </div>
 
                 <!--Image Preview 5-->
                 <div class="tab-content" id="random">
                     <p>Ver progreso</p>
-                    <img src="/Recursos/Imagenes/Secretos-en-red-inicio.webp" alt="dummy image" class="dummy-image">
+                    <img src="/Recursos/Imagenes/Progreso.png" alt="dummy image" class="dummy-image">
+                    <img src="/Recursos/Imagenes/Progreso-tablet.png" alt="dummy image" class="dummy-image-tablet">
+                    <img src="/Recursos/Imagenes/Progreso-cel.png" alt="dummy image" class="dummy-image-cel">
                 </div>
 
-                <a href="" class="tab__boton">Ver más</a>
+                <!-- <a href="" class="tab__boton">Ver más</a> -->
             </div>
         </section>
         <!--Preview Section End-->
@@ -205,76 +222,38 @@
 
     </main>
 
+    <!--Footer-->
     <footer class="footer">
-
-        <!--Footer Left-->
-        <div class="footer__izquierdo">
-
-            <!--Secondary Logo-->
-            <div class="footer__izquierdo__logo">
-                <img src="/Recursos/Imagenes/logo-blanco.webp" alt="logo-blanco">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>Contáctenos</p>
+                <a href="mailto:info@secretosparacontar.org">info@secretosparacontar.org</a>
+                <p>Tel: (57) 604 322 06 90</p>
+                <p>Trabaja con nosotros</p>
+                <p>Calle 11A #43B - 41, Barrio Manila, Medellín, Colombia</p>
             </div>
-
-            <!--Politics-->
-            <div class="footer__izquierdo__politica">
-                <a href="https://secretosparacontar.org/politica-de-privacidad-y-proteccion-de-datos-personales/"
-                    target="_blank">Política de privacidad y protección de datos personales</a>
-            </div>
-
-            <!--Rights-->
-            <div class="footer__izquierdo__derechos">
-                <h3>© Todos los derechos reservados</h3>
-            </div>
-
-        </div>
-        <!--Footer Left End-->
-
-        <!--Footer Right-->
-        <div class="footer__derecho">
-
-            <!--Heading Contact-->
-            <div class="footer__derecho__contacto">
-                <h4>Contáctenos</h4>
-            </div>
-
-            <!--Division-->
-            <div class="footer__derecho__division">
-
-                <!--Contact-->
-                <div class="footer__derecho__informacion">
-                    <p><span>info@secretosparacontar.org</span></p>
-                    <p><span>(57) 604 322 06 90</span></p>
-                    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSf5OEh3yqEpG76xsVZMC56i3CDCBcUHG1ay7l8jXx-FS2ERfQ/viewform"
-                            target="_blank">Trabaja con nosotros</a></p>
-                </div>
-
-                <!--Location-->
-                <div class="footer__derecho__informacion">
-                    <p><span>Calle 11A #43B – 41</span></p>
-                    <p><span>Barrio Manila</span></p>
-                    <p><span>Medellín, Colombia</span></p>
+            <div class="footer-right">
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/secretosparacontar?mibextid=ZbWKwL" target="_blank"><i
+                                class='bx bxl-facebook-circle'></i></a></li>
+                    <li><a href="https://www.instagram.com/secretosparacontar?igsh=emE1MGUyZ2dpMXl0" target="_blank"><i
+                                class='bx bxl-instagram'></i></a></li>
+                    <li><a href="mailto:secretosparacontar@gmail.com" target="_blank"><i class='bx bx-envelope'></i></a>
+                    </li>
+                    <li><a href="https://wa.me/+576043220690" target="_blank"><i class='bx bxl-whatsapp'></i></a></li>
+                    <li><a href="https://www.youtube.com/c/FundaciónSecretosparaContar" target="_blank"><i
+                                class='bx bxl-youtube'></i></a></li>
+                    <li><img src="/Recursos/Imagenes/lions.png" alt="lions" class="lions"></li>
+                </ul>
+                <div class="footer-logo">
+                    <img src="/Recursos/Imagenes/logo-blanco.webp" alt="Logo blanco" class="logo__blanco">
                 </div>
             </div>
-            <!--Division End-->
-
-            <!--Social Icons-->
-            <div class="footer__redes">
-                <a href=""><img src="/Recursos/Imagenes/lions.png" alt="lions"></a>
-                <a href="https://www.facebook.com/secretosparacontar" target="_blank"><i
-                        class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/secretosparacontar/" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/secretoscontar" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://co.linkedin.com/company/fundacion-secretos-para-contar" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://www.youtube.com/channel/UCz1EF-X34KBZ8YbiHplgU4g" target="_blank"><i
-                        class="fab fa-youtube"></i></a>
-            </div>
-            <!--Social Icons End-->
-
         </div>
-        <!--Footer Right End-->
-
+        <div class="footer-bottom">
+            <p>Política de privacidad y protección de datos personales</p>
+            <p>© Todos los derechos reservados</p>
+        </div>
     </footer>
 
     <!--Link to JS-->
