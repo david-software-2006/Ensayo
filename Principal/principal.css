@@ -227,8 +227,8 @@ header {
 }
 
 .user-img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
@@ -242,7 +242,7 @@ header {
     display: flex;
     flex-direction: column;
     row-gap: 2.1rem;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 .nav-link {
@@ -723,6 +723,10 @@ box-shadow: var(--hover-color) 0px 1px 25px;
         transition: .2s;
     }
 
+    .container-home {
+        margin-top: 200px;
+    }
+
     .container {
         padding: 201px 4% 48px;
     }
@@ -761,7 +765,7 @@ box-shadow: var(--hover-color) 0px 1px 25px;
     }
 
     .footer-right {
-        align-items: flex-start;
+        align-items: flex-end;
     }
 
     .footer-logo {
@@ -916,7 +920,18 @@ box-shadow: var(--hover-color) 0px 1px 25px;
     .user-img,
     .watch-btn .bx {
         width: 60px;
-        height: 60px;
+        height: 70px;
+    }
+}
+
+
+@media (max-width: 780px){
+    header{
+        position: absolute;
+    }
+
+    .container-home {
+        margin-top: 150px;
     }
 }
 
@@ -924,6 +939,7 @@ box-shadow: var(--hover-color) 0px 1px 25px;
     .logo {
         display: none;
     }
+
 
     .logo1 {
         display: block;
@@ -982,7 +998,7 @@ box-shadow: var(--hover-color) 0px 1px 25px;
     .home {
         height: 110vh;
         gap: 0.1rem;
-        margin-top: 200px;
+        margin-top: 150px;
     }
 
     .btn2 {

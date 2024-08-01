@@ -319,8 +319,8 @@ header {
 }
 
 .user-img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
@@ -334,7 +334,7 @@ header {
     display: flex;
     flex-direction: column;
     row-gap: 2.1rem;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 .nav-link {
@@ -502,6 +502,10 @@ header {
 /* Media Queries */
 
 @media (max-width: 1545px) {
+    .container-home {
+        margin-top: 100px;
+    }
+
     .footer-container {
         padding: 0 10px;
     }
@@ -518,7 +522,7 @@ header {
 
 @media (max-width: 1180px) {
     .footer-right {
-        align-items: flex-start;
+        align-items: flex-end;
     }
 
     .footer-logo {
@@ -668,6 +672,14 @@ header {
 }
 
 @media (max-width: 768px) {
+    header{
+        position: absolute
+    }
+
+    .container-home {
+        margin-top: 0;
+    }
+
     .nav {
         padding: 11px 0;
     }

@@ -330,6 +330,10 @@ body {
 /* Media Queries */
 
 @media (max-width: 1545px) {
+    .container-home {
+        margin-top: 100px;
+    }
+
     .footer-container {
         padding: 0 10px;
     }
@@ -341,6 +345,10 @@ body {
 
     .footer-logo {
         right: 50px;
+    }
+
+    .footer {
+        margin-top: 490px;
     }
 }
 
@@ -383,7 +391,8 @@ body {
     }
 
     .footer {
-        margin-top: 250px;
+        margin-top: 365px;
+        margin-bottom: 50px;
     }
 }
 
@@ -545,8 +554,8 @@ header {
 }
 
 .user-img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
@@ -720,6 +729,14 @@ header {
 }
 
 @media (max-width: 768px) {
+    header{
+        position: absolute
+    }
+
+    .container-home {
+        margin-top: 0;
+    }
+
     .nav {
         padding: 11px 0;
     }
@@ -799,7 +816,7 @@ header {
     .user-img,
     .watch-btn .bx {
         width: 60px;
-        height: 60px;
+        height: 70px;
     }
 
     .navbar {

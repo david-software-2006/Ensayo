@@ -134,6 +134,33 @@ a:hover {
     color: #fa4616;
 }
 
+
+.boton-download {
+    border: none;
+    background-color: transparent;
+    align-content: center;
+    padding-left: 50px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.boton-download:hover {
+    color: #a5a5a5;
+}
+
+.img {
+    width: 120px;
+}
+
+iframe {
+    position: relative;
+    top: 40px;
+    margin-bottom: 40px;
+    border-radius:12px;
+    width: 100%;
+}
+
+
 /* Media query para pantallas pequeñas */
 
 @media only screen and (max-width: 600px) {
@@ -160,26 +187,8 @@ a:hover {
         right: 60px;
         z-index: 1004;
     }
-}
 
-.boton-download {
-    border: none;
-    background-color: transparent;
-    align-content: center;
-    padding-left: 50px;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-
-}
-
-.boton-download:hover {
-    color: #a5a5a5;
-}
-
-.img {
-    width: 120px;
-}
-
-iframe {
-    border-radius:12px
+    iframe {
+        width: auto;
+    }
 }
