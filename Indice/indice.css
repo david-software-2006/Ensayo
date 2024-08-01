@@ -263,7 +263,15 @@
   margin-top: 240px;
 }
 
-
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Cambiado de center a flex-start */
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 .footer-left,
 .footer-right {
@@ -323,7 +331,7 @@
   margin-top: 20px;
   border-top: 1px solid #dee2e6;
   padding-top: 10px;
-  font-family: roboto;
+  font-family: "Roboto";
 }
 
 .footer-bottom p {
