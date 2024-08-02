@@ -21,7 +21,7 @@
         </div>
         <div class="form-group">
             <img class="img3" src="/Recursos/Imagenes/secretos.png" alt="Foto">
-            <form id="registerForm" onsubmit="saveFormData(event)">
+            <form id="registerForm">
                 <div class="input-icon">
                     <div class="input-container">
                         <i class='bx bx-user icon'></i>
@@ -49,11 +49,16 @@
                     </div>
                     <div class="input-container">
                         <i class='bx bx-lock icon'></i>
-                        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                        <input type="password" id="password" name="password" placeholder="Contraseña mínimo 6 caracteres" required oninput="checkPasswordStrength()">
+                        <i class='bx bx-show icon-eye' onclick="togglePasswordVisibility('password', this)"></i> 
                     </div>
+
+                    <div id="password-strength" class="password-strength"></div>                                      
+
                     <div class="input-container">
                         <i class='bx bx-lock icon'></i>
                         <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmar contraseña" required>
+                        <i class='bx bx-show icon-eye' onclick="togglePasswordVisibility('confirm_password', this)"></i>
                     </div>
                     <button class="boton" type="submit">Aceptar</button>
                     <h3 class="or-separator">o</h3>
@@ -82,7 +87,7 @@
         <div class="login-avatar">
             <img src="/Recursos/Imagenes/Registro.png" alt="Avatar">
         </div>
-        <form class="login-form" id="registerFormMobile" onsubmit="saveFormData(event)">
+        <form class="login-form" id="registerFormMobile">
             <div class="input-container">
                 <i class='bx bx-user'></i>
                 <input type="text" id="nombreMobile" name="nombre" placeholder="Nombre" required>
@@ -108,12 +113,17 @@
                 <input type="email" id="emailMobile" name="email" placeholder="E-mail" required>
             </div>
             <div class="input-container">
-                <i class='bx bx-lock'></i>
-                <input type="password" id="passwordMobile" name="password" placeholder="Crear contraseña" required>
+                <i class='bx bx-lock icon'></i>
+                <input type="password" id="passwordMobile" name="password" placeholder="Contraseña mínimo 6 caracteres" required oninput="checkPasswordStrength()">
+                <i class='bx bx-show icon-eye' onclick="togglePasswordVisibility('passwordMobile', this)"></i>
             </div>
+
+            <div id="password-strength-mobile" class="password-strength"></div>
+                      
             <div class="input-container">
                 <i class='bx bx-lock'></i>
-                <input type="password" id="confirm_passwordMobile" name="confirm_password" placeholder="Repetir contraseña" required>
+                <input type="password" id="confirm_passwordMobile" name="confirm_password" placeholder="Confirmar contraseña" required>
+                <i class='bx bx-show icon-eye' onclick="togglePasswordVisibility('confirm_passwordMobile', this)"></i>
             </div>
             <button type="submit" class="login-button">Aceptar</button>
         </form>

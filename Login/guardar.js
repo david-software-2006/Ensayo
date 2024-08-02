@@ -13,7 +13,56 @@ function saveData() {
 }
 */
 
-// Función para el login
+function showAlert(message, type = 'success') {
+    console.log('showAlert called'); // Verifica si la función se llama
+
+    // Crear el contenedor de la alerta
+    const alertContainer = document.createElement('div');
+    alertContainer.classList.add('alert-container');
+    alertContainer.classList.add(type === 'success' ? 'alert-success' : 'alert-error');
+
+    // Crear el icono de la alerta
+    const alertIcon = document.createElement('i');
+    alertIcon.classList.add('bx', type === 'success' ? 'bx-check-circle' : 'bx-x-circle', 'alert-icon');
+    alertContainer.appendChild(alertIcon);
+
+    // Crear el mensaje de la alerta
+    const alertMessage = document.createElement('div');
+    alertMessage.classList.add('alert-message');
+    alertMessage.textContent = message;
+    alertContainer.appendChild(alertMessage);
+
+    // Crear el botón de cerrar
+    const alertClose = document.createElement('button');
+    alertClose.classList.add('alert-close');
+    alertClose.innerHTML = '&times;';
+    alertClose.onclick = function() {
+        document.body.removeChild(alertContainer);
+    };
+    alertContainer.appendChild(alertClose);
+
+    // Agregar la alerta al body
+    document.body.appendChild(alertContainer);
+
+    // Mostrar la alerta con animación
+    setTimeout(function() {
+        alertContainer.classList.add('show');
+    }, 10);
+
+    // Ocultar y eliminar la alerta después de 4 segundos
+    setTimeout(function() {
+        alertContainer.classList.remove('show');
+        setTimeout(function() {
+            if (document.body.contains(alertContainer)) {
+                document.body.removeChild(alertContainer);
+            }
+        }, 500);
+    }, 4000);
+}
+
+
+
+// Función para manejar el inicio de sesión
 function login(event) {
     event.preventDefault();
     const isDesktop = event.target.id === 'loginForm';
@@ -23,22 +72,32 @@ function login(event) {
     const email = document.getElementById(emailId).value;
     const password = document.getElementById(passwordId).value;
 
-    const registros = JSON.parse(localStorage.getItem('registros')) || [];
-    const usuario = registros.find(u => u.email === email && u.password === password);
+    if (email && password) {
+        // Obtiene los registros desde localStorage
+        const registros = JSON.parse(localStorage.getItem('registros')) || [];
 
-    if (usuario) {
-        alert('Inicio de sesión exitoso');
-        window.location.href = '/principal.html'; // Redirige a la página de libros
+        // Busca el usuario
+        const usuario = registros.find(u => u.email === email && u.password === password);
+
+        if (usuario) {
+            showAlert('Inicio de sesión exitoso', 'success');
+            setTimeout(() => {
+                window.location.href = '/principal.html'; // Redirige a la página de libros
+            }, 1000); // Espera 1 segundo para que la alerta sea visible
+        } else {
+            showAlert('Email o contraseña incorrectos', 'error');
+        }
     } else {
-        alert('Email o contraseña incorrectos');
+        showAlert('Por favor, complete todos los campos', 'error');
     }
 }
 
-// Evento para cargar los listeners cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', function() {
-    // Para la página de login
-    const loginForm = document.getElementById('loginForm');
-    const loginFormMobile = document.getElementById('loginFormMobile');
-    if (loginForm) loginForm.addEventListener('submit', login);
-    if (loginFormMobile) loginFormMobile.addEventListener('submit', login);
-});
+
+ // Function to toggle password visibility
+ function togglePasswordVisibility(passwordId, icon) {
+    const passwordInput = document.getElementById(passwordId);
+    const isPassword = passwordInput.type === 'password';
+    passwordInput.type = isPassword ? 'text' : 'password';
+    icon.classList.toggle('bx-show', !isPassword);
+    icon.classList.toggle('bx-hide', isPassword);
+}

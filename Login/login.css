@@ -58,6 +58,8 @@ body {
     margin-bottom: 1.5rem;
     padding: 0.5rem;
     width: 90%;
+    position: relative;
+    margin: 20px auto;
 }
 
 .login-form .icon {
@@ -142,4 +144,83 @@ body {
 
 .recover-password {
     text-decoration: underline;
+}
+
+/* Estilo general para el contenedor de la alerta */
+.alert-container {
+    position: fixed;
+    top: 5%; /* Ajusta este valor para mover la alerta más arriba o más abajo */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra horizontalmente y mueve verticalmente */
+    max-width: 300px;
+    width: 90%; /* Ajusta el tamaño según sea necesario */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+/* Estilo para mostrar la alerta con animación */
+.alert-container.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Asegura que esté visible */
+}
+
+/* Estilo para la alerta de éxito */
+.alert-success {
+    border-color: #4caf50;
+}
+
+/* Estilo para la alerta de error */
+.alert-error {
+    border-color: #f44336;
+}
+
+/* Estilo para el icono de la alerta */
+.alert-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Estilo para el mensaje de la alerta */
+.alert-message {
+    flex: 1;
+    font-size: 16px;
+}
+
+/* Estilo para el botón de cerrar */
+.alert-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+.input-icon, .input-container {
+    position: relative;
+}
+
+.input-icon input, .input-container input {
+    width: 100%;
+    padding-right: 40px; /* Add enough padding to the right to make space for the icon */
+}
+
+.iconD, .icon-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-container .icon-toggle {
+    right: 10px;
 }

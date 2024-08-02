@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
             <img class="img2" src="/Recursos/Imagenes/logo.png" alt="Foto">
-            <form id="loginForm">
+            <form id="loginForm" onsubmit="login(event)">
                 <div class="input-icon">
                     <i class='bx bx-envelope icon'></i>
                     <input type="email" id="email" name="email" placeholder="E-mail" required>
@@ -30,6 +30,7 @@
                 <div class="input-icon">
                     <i class='bx bx-lock iconD'></i>
                     <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <i class='bx bx-show iconD1' onclick="togglePasswordVisibility('password', this)"></i>
                 </div>
                 <button class="boton" type="submit">Iniciar Sesión</button>
                 <a href="/Login/recuperar.html" class="forgot-password">Recuperar contraseña</a>
@@ -54,7 +55,7 @@
         <div class="login-avatar">
             <img src="/Recursos/Imagenes/login.png" alt="Avatar">
         </div>
-        <form class="login-form" id="loginFormMobile">
+        <form class="login-form" id="loginFormMobile" onsubmit="login(event)">
             <div class="input-container">
                 <i class='bx bx-envelope icon'></i>
                 <input type="email" id="emailMobile" placeholder="ejemplo@gmail.com" required>
@@ -62,6 +63,7 @@
             <div class="input-container">
                 <i class='bx bx-lock icon'></i>
                 <input type="password" id="passwordMobile" placeholder="********" required>
+                <i class='bx bx-show iconD' onclick="togglePasswordVisibility('passwordMobile', this)"></i>
             </div>
             <button type="submit" class="login-button">Leer</button>
         </form>

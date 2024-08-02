@@ -160,6 +160,42 @@ iframe {
     width: 100%;
 }
 
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input[type="password"] {
+    width: 100%;
+    padding-right: 30px; /* Espacio para el icono */
+    box-sizing: border-box;
+}
+
+.input-container .icon-eye {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.password-strength {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.password-strength.weak {
+    color: red;
+}
+
+.password-strength.moderate {
+    color: orange;
+}
+
+.password-strength.strong {
+    color: green;
+}
+
+
 
 /* Media query para pantallas pequeñas */
 

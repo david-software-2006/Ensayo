@@ -172,7 +172,8 @@ body {
     margin: 10px;
     overflow: hidden;
     transition: transform 0.2s;
-    width: 250px; /* Mantén el ancho consistente */
+    width: 250px;
+    /* Mantén el ancho consistente */
     display: inline-block;
 }
 
@@ -234,13 +235,13 @@ body {
     padding: 20px 0;
     font-family: "Be Vietnam Pro", sans-serif;
     border-top: 2px solid #dee2e6;
-    margin-top: 270px;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Cambiado de center a flex-start */
+    align-items: flex-start;
+    /* Cambiado de center a flex-start */
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
@@ -267,7 +268,8 @@ body {
 .footer-right {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Alinear elementos a la derecha */
+    align-items: flex-end;
+    /* Alinear elementos a la derecha */
 }
 
 .footer-right ul {
@@ -276,7 +278,8 @@ body {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end; /* Alinear íconos a la derecha */
+    justify-content: flex-end;
+    /* Alinear íconos a la derecha */
 }
 
 .footer-right ul li {
@@ -427,7 +430,7 @@ body {
         width: 100px;
         height: 80px;
     }
-    
+
     .footer-left,
     .footer-right {
         flex: 1 0 100%;
@@ -451,11 +454,6 @@ body {
     }
 }
 
-
-
-
-
-                  
 
 /* Media Queries */
 @media (max-width: 320px) {
@@ -729,7 +727,7 @@ header {
 }
 
 @media (max-width: 768px) {
-    header{
+    header {
         position: absolute
     }
 
@@ -738,7 +736,20 @@ header {
     }
 
     .nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 5px;
         padding: 11px 0;
+    }
+
+    .search-box {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 4px;
+        order: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 
     .logo {
@@ -790,22 +801,6 @@ header {
 }
 
 @media (max-width: 408px) {
-    .nav {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        row-gap: 5px;
-    }
-
-    .search-box {
-        max-width: 100%;
-        width: 100%;
-        border-radius: 4px;
-        order: 3;
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-
     .products {
         width: 350px;
     }
@@ -855,4 +850,3 @@ header {
         font-size: 14px;
     }
 }
-

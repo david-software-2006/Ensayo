@@ -230,6 +230,22 @@ a {
     color: #ffffff;
 }
 
+.input-icon, .input-container {
+    position: relative;
+}
+
+
+
+.iconD1, .icon-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+
 /* Media queries para ocultar elementos según el ancho de la pantalla */
 @media (max-width: 768px) {
     .container {
