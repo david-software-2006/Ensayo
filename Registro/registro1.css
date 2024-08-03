@@ -15,7 +15,7 @@ body {
     border-radius: 15px;
     width: 300px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     text-align: center;
     margin: auto;
 }
@@ -65,6 +65,25 @@ body {
     color: black; /* Color negro para los íconos */
     margin-right: 10px;
 }
+
+/* Estilo específico para el campo de contraseña mínimo 6 caracteres */
+.login-form .input-container.password-container {
+    margin-bottom: 15px; /* Asegúrate de que tenga el mismo margen que los demás campos */
+}
+
+.login-form .input-container.password-container input {
+    padding-left: 33px; /* Padding consistente con los otros campos */
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+}
+
+/* Ajustes para el icono de la visibilidad de la contraseña */
+.login-form .input-container.password-container .icon-eye {
+    right: 10px; /* Alineación del icono en relación con el campo de entrada */
+}
+
 
 .login-form input,
 .login-form select {
@@ -276,7 +295,6 @@ select {
 
 .input-container input[type="password"] {
     width: 100%;
-    padding-left: 30px; /* Espacio para el icono */
     box-sizing: border-box;
 }
 

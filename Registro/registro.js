@@ -68,6 +68,14 @@ function saveFormData(event) {
 
     console.log('Datos del formulario:', formData); // Verifica los datos del formulario
 
+    // Verifica si la barra de fortaleza de la contraseña está en rojo (débil)
+    const strengthIndicator = isMobile ? document.getElementById('password-strength-mobile') : document.getElementById('password-strength');
+    if (strengthIndicator.classList.contains('weak')) {
+        console.log('La contraseña es demasiado débil'); // Verifica el mensaje de error
+        showAlert('La contraseña es demasiado débil', 'error'); // Utiliza showAlert para mostrar mensajes
+        return;
+    }
+
     // Verifica si la contraseña tiene al menos 6 caracteres
     if (formData.password.length < 6) {
         console.log('La contraseña debe tener al menos 6 caracteres'); // Verifica el mensaje de error
@@ -104,7 +112,7 @@ function saveFormData(event) {
 
     // Muestra un mensaje de confirmación
     console.log('Datos guardados correctamente'); // Verifica el mensaje de éxito
-    showAlert('Datos guardados correctamente', 'success');
+    showAlert('¡Registro exitoso!', 'success');
 
     // Limpia el formulario después de guardar
     event.target.reset();
@@ -197,4 +205,3 @@ function togglePasswordVisibility(passwordFieldId, eyeIcon) {
         eyeIcon.classList.add('bx-show');
     }
 }
-

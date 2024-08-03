@@ -13,6 +13,8 @@
 
 <body>
 
+    <div class="background-overlay"></div>
+
     <div class="container">
         <div class="regir">
             <h1>Regístrate</h1>
@@ -112,7 +114,7 @@
                 <i class='bx bx-envelope'></i>
                 <input type="email" id="emailMobile" name="email" placeholder="E-mail" required>
             </div>
-            <div class="input-container">
+            <div class="input-container password-container">
                 <i class='bx bx-lock icon'></i>
                 <input type="password" id="passwordMobile" name="password" placeholder="Contraseña mínimo 6 caracteres" required oninput="checkPasswordStrength()">
                 <i class='bx bx-show icon-eye' onclick="togglePasswordVisibility('passwordMobile', this)"></i>

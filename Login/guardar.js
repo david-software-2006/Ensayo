@@ -80,7 +80,7 @@ function login(event) {
         const usuario = registros.find(u => u.email === email && u.password === password);
 
         if (usuario) {
-            showAlert('Inicio de sesión exitoso', 'success');
+            showAlert('¡Inicio de sesión exitoso!', 'success');
             setTimeout(() => {
                 window.location.href = '/principal.html'; // Redirige a la página de libros
             }, 1000); // Espera 1 segundo para que la alerta sea visible
