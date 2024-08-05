@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/Recursos/Imagenes/favicon.webp" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor de PDF</title>
+    <link rel="stylesheet" href="/VerPdf/visor.css">
+</head>
+
+<body>
+
+    <label for="toggle" id="label_toggle" class="label_toggle"><i class="fa-solid fa-toggle-off"></i></label>
+    <input type="checkbox" id="toggle" class="toggle">
+
+
+    <div class="pdf-container">
+        <div class="pdf-viewer"></div>
+    </div>
+
+    <div class="progress-bar" style="width: 0%;">0% leído</div>
+
+    <button class="menu-button" id="left-menu-button">&#9776;</button>
+
+    <div class="left-menu" id="left-menu">
+        <button class="close-button" id="close-left-menu">&times;</button>
+
+        <ul>
+
+            <li><iframe class="audio" id="audio-iframe" width="600" height="152"></iframe></li>
+            <li><button class="boton-download" id="download-btn"><img class="img" src="/Recursos/Imagenes/descarga.png"
+                        alt="icono"> <br>
+                    Descargar Pdf </button>
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="/VerPdf/visor.js"></script>
+    <script src="/Perfil/oscuro.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/Recursos/Imagenes/favicon.webp" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/Principal/principal.css">
+    <title>Verde y letra</title>
+</head>
+
+<body>
+
+    <label for="toggle" id="label_toggle" class="label_toggle"><i class="fa-solid fa-toggle-off"></i></label>
+    <input type="checkbox" id="toggle" class="toggle">
+
+    <!--Header-->
+    <header>
+        <!--Barra azul-->
+        <div class="header__barra--azul"></div>
+        <!--Nav-->
+        <div class="nav container1">
+            <!--Logo-->
+            <a href="/principal.html" class="logo"><img src="/Recursos/Imagenes/SPC_Horizontal_Color.png" alt="Secretos para contar 20 años"></a>
+            <a href="/principal.html" class="logo1"><img src="/Recursos/Imagenes/20-blanco.png" alt="Secretos para contar 20 años"></a>
+
+
+            <!--Search Box-->
+            <div class="search-box">
+                <input class="search" type="search" name="search" id="search-input" placeholder="Buscar">
+                <i class='bx bx-search'></i>
+            </div>
+
+            <!--User-->
+            <a href="/Perfil/Perfil.html" class="user">
+                <img src="/Recursos/Imagenes/usuario.png" alt="user" class="user-img">
+            </a>
+
+            <!--Nav Bar-->
+            <div class="navbar">
+                <a href="#home" class="nav-link nav-active">
+                    <i class='bx bx-home'></i>
+                    <span class="nav-link-title">Principal</span>
+                </a>
+
+                <a href="/Perfil/perfil.html" class="nav-link">
+                    <i class='bx bx-user-circle'></i>
+                    <span class="nav-link-title">Perfil</span>
+                </a>
+
+                <!-- <a href="#movies" class="nav-link">
+                    <i class='bx bx-compass'></i>
+                    <span class="nav-link-title">Explore</span>
+                </a> -->
+
+                <a href="/Indice/indice.html" class="nav-link">
+                    <i class='bx bx-list-ul'></i>
+                    <span class="nav-link-title">Indice</span>
+                </a>
+
+
+                <a href="/Libros/libro.html" class="nav-link">
+                    <i class='bx bx-book-bookmark'></i>
+                    <span class="nav-link-title">Libros</span>
+                </a>
+
+                <a href="/Guardados/guardados.html" class="nav-link">
+                    <i class='bx bxs-save'></i>
+                    <span class="nav-link-title">Guardados</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    
+    <!--Home-->
+    <section class="home container-home" id="home">
+        <div class="home-text">
+            <h1>VERDE <span class="span">Y</span> LETRA</h1>
+
+            <a href="https://secretosparacontar.org/donaciones/" class="btn">Apoya a una comunidad <i class='bx bx-bookmark-heart'></i></a>
+            <a href="/Libros/libro.html" class="btn2">Libros <i class='bx bx-book'></i></a>
+        </div>
+
+        <div class="home-img">
+            <img src="/Recursos/Imagenes/Bienvenida.png" alt="">
+        </div>
+    </section> 
+
+    <!--Container-->
+
+    <section class="services">
+        <section class="services-title">
+            <div class="middle-text">
+                <h4>Conoce más sobre</h4>
+                <h2>Nuestros servicios</h2>
+            </div>
+        </section>
+        <div class="container">
+            <div class="container-box">
+                <img src="/Recursos/Imagenes/audifono.png" alt="">
+                <h3>Audios</h3>
+                <p>Podrás escuchar libros en espacios tranquilos</p>
+            </div>
+
+            <div class="container-box">
+                <img src="/Recursos/Imagenes/video.png" alt="">
+                <h3>Videos</h3>
+                <p>Podrás ver tus libros favoritos en videos</p>
+            </div>
+
+            <div class="container-box">
+                <img src="/Recursos/Imagenes/audiolibro.png" alt="">
+                <h3>Audiolibros</h3>
+                <p>Podrás leer y escuchar tus libros al mismo tiempo</p>
+            </div>
+        </div>
+    </section>
+
+    <!--About us-->
+    <section class="about container-home" id="about">
+        <div class="about-img">
+            <img src="/Recursos/Imagenes/nosotros.png" alt="">
+        </div>
+
+        <div class="about-text">
+            <h2>Sobre nosotros</h2>
+            <p>En el corazón de la comunidad rural, donde cada rincón guarda una historia y cada rostro refleja
+                sabiduría, se encuentran los
+                secretos más valiosos. Verde y Letra hace posible
+                la preservación de estos tesoros a través de los libros de secretos para contar. <br><br>
+                Verde y Letra se convierte en el guardián de tradiciones y narrativas que han pasado de generación en
+                generación.
+                Estos relatos, llenos de misterios y vivencias, invitan a descubrir el legado cultural y la riqueza de
+                nuestras raíces,
+                permitiendo que la voz del campo resuene con fuerza y autenticidad.
+            </p>
+            <a href="https://secretosparacontar.org/" class="btn">Más información <i class="bx bxs-group"></i></a>
+        </div>
+    </section>
+
+    <!--Our shop-->
+    <section class="shop container-home" id="shop">
+        <div class="middle-text">
+            <h4>Algunos de</h4>
+            <h2>Nuestros Libros</h2>
+        </div>
+
+        <div class="shop-content">
+            <div class="row">
+                <img src="/Recursos/Imagenes/libro8.webp" alt="">
+                <h3>Todo lo contrario</h3>
+                <p>Un libro que nos lleva a reflexionar y a
+                    sumergirnos por la filosofía
+                </p>
+
+                <div class="in-text">
+                    <!-- <div class="price">
+                        <h6>778.97</h6>
+                    </div> -->
+
+                    <div class="s-btn">
+                        <a href="/Libros/libro.html">Visitar</a>
+                    </div>
+                </div>
+
+                <div class="top-icon">
+                    <a href=""><i class="bx bx-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="/Recursos/Imagenes/libro3.webp" alt="">
+                <h3>Cuentos maravillosos</h3>
+                <p>Un libro de cuentos clásicos para
+                    compartir en familia y amigos
+                </p>
+
+                <div class="in-text">
+                    <!-- <div class="price">
+                        <h6>778.97</h6>
+                    </div> -->
+
+                    <div class="s-btn">
+                        <a href="Libros/libro.html">Visitar</a>
+                    </div>
+                </div>
+
+                <div class="top-icon">
+                    <a href=""><i class="bx bx-heart"></i></a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <img src="/Recursos/Imagenes/libo2.webp" alt="">
+                <h3>Más claro no canta un gallo</h3>
+                <p>El libro perfecto para reír y difrutar de unas buenas
+                    trovas y rimas
+                </p>
+
+                <div class="in-text">
+                    <!-- <div class="price">
+                        <h6>778.97</h6>
+                    </div> -->
+
+                    <div class="s-btn">
+                        <a href="Libros/libro.html">Visitar</a>
+                    </div>
+
+                </div>
+
+                <div class="top-icon">
+                    <a href=""><i class="bx bx-heart"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-btn">
+            <a href="/Libros/libro.html" class="btn">Todos los libros <i class="bx bx-book"></i></a>
+        </div>
+
+
+    </section>
+
+
+    <!--Reviews-->
+    <section class="reviews" id="reviews">
+        <div class="middle-text">
+            <h4>El contenido</h4>
+            <h2>más recomendado</h2>
+        </div>
+    </section>
+
+    <section class="reviews-content container-home">
+        <div class="box">
+            <img src="/Recursos/Imagenes/libro5.webp" alt="">
+            <p>
+                Para sumergirse en la historia
+            </p>
+
+            <div class="in-box">
+                <div class="bxx-text">
+                    <h4>Historias y lugares</h4>
+                    <h5>Categoría historia</h5>
+
+                    <div class="ratings">
+                        <a href=""><i class="bx bxs-star"></i></a>
+                        <a href=""><i class="bx bxs-star"></i></a>
+                        <a href=""><i class="bx bxs-star"></i></a>
+                        <a href=""><i class="bx bxs-star"></i></a>
+                        <a href=""><i class="bx bxs-star"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="box">
+            <img src="/Recursos/Imagenes/libro6.webp" alt="">
+            <p>
+                Para pasar tiempo de calidad
+            </p>
+
+            <div class="in-box">
+                <div class="bxx-text">
+                    <h4>A que te cojo ratón</h4>
+                    <h5>Categoría juegos</h5>
+
+                    <div class="ratings">
+                        <a href=""><i class="bx bxs-star"></i></a>
+                        <a href=""><i class="bx bxs-star"></i></a>
+                        <a href=""><i class="bx bxs-star"></i></a>
+                        <a href=""><i class="bx bxs-star"></i></a>
+                        <a href=""><i class="bx bxs-star"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="box">
+            <img src="/Recursos/Imagenes/libro7.webp" alt="">
+            <p>
+                Para dejarse sorprender por los cuentos
+            </p>
+
+            <div class="in-box">
+                <div class="bxx-text">
+                    <h4>Entre cuento y cuento</h4>
+                    <h5>Categoría cuentos</h5>
+
+                    <div class="ratings">
+                        <a href=""><i class="bx bxs-star"></i></a>
+                        <a href=""><i class="bx bxs-star"></i></a>
+                        <a href=""><i class="bx bxs-star"></i></a>
+                        <a href=""><i class="bx bxs-star"></i></a>
+                        <a href=""><i class="bx bxs-star"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>Contáctenos</p>
+                <a href="mailto:info@secretosparacontar.org">info@secretosparacontar.org</a>
+                <p>Tel: (57) 604 322 06 90</p>
+                <p>Trabaja con nosotros</p>
+                <p>Calle 11A #43B - 41, Barrio Manila, Medellín, Colombia</p>
+            </div>
+            <div class="footer-right">
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/secretosparacontar?mibextid=ZbWKwL" target="_blank"><i
+                                class='bx bxl-facebook-circle'></i></a></li>
+                    <li><a href="https://www.instagram.com/secretosparacontar?igsh=emE1MGUyZ2dpMXl0" target="_blank"><i
+                                class='bx bxl-instagram'></i></a></li>
+                    <li><a href="mailto:secretosparacontar@gmail.com" target="_blank"><i class='bx bx-envelope'></i></a>
+                    </li>
+                    <li><a href="https://wa.me/+576043220690" target="_blank"><i class='bx bxl-whatsapp'></i></a></li>
+                    <li><a href="https://www.youtube.com/c/FundaciónSecretosparaContar" target="_blank"><i
+                                class='bx bxl-youtube'></i></a></li>
+                    <li><img src="/Recursos/Imagenes/lions.png" alt="lions" class="lions"></li>
+                </ul>
+                <div class="footer-logo">
+                    <img src="/Recursos/Imagenes/logo-blanco.webp" alt="Logo blanco" class="logo__blanco">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Política de privacidad y protección de datos personales</p>
+            <p>© Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+
+
+    <!--Scroll-->
+
+    <a href="" class="scroll"><i class="bx bx-up-arrow-alt"></i></a>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/Principal/principal.js"></script>
+    <script src="/Libros/libro.js"></script>
+    <script src="/Perfil/oscuro.js"></script>
+
+
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+</body>
+
+</html>

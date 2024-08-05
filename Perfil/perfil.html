@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Recursos/Imagenes/favicon.webp" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/be6261ecc3.js" crossorigin="anonymous"></script>
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/Perfil/perfil.css">
+</head>
+<body>
+    <label for="toggle" id="label_toggle" class="label_toggle"><i class="fa-solid fa-toggle-off"></i></label>
+    <input type="checkbox" id="toggle" class="toggle">
+
+    <div class="navbar">
+        <a href="/principal.html" class="nav-link nav-active">
+            <i class='bx bx-home'></i>
+            <span class="nav-link-title">Principal</span>
+        </a>
+        <a href="/Perfil/perfil.html" class="nav-link">
+            <i class='bx bx-user-circle'></i>
+            <span class="nav-link-title">Perfil</span>
+        </a>
+        <a href="/Indice/indice.html" class="nav-link">
+            <i class='bx bx-list-ul'></i>
+            <span class="nav-link-title">Indice</span>
+        </a>
+        <a href="/Libros/libro.html" class="nav-link">
+            <i class='bx bx-book-bookmark'></i>
+            <span class="nav-link-title">Libros</span>
+        </a>
+        <a href="/Guardados/guardados.html" class="nav-link">
+            <i class='bx bxs-save'></i>
+            <span class="nav-link-title">Guardados</span>
+        </a>
+    </div>
+
+    <div class="container">
+        <h1 class="profile-title">PERFIL</h1>
+        <div class="avatar">
+            <img id="profile-pic" src="/Recursos/Imagenes/usuario.png" alt="Profile Picture">
+            <input type="file" id="profile-pic-input" accept="image/*" style="display:none;">
+        </div>
+        <div class="details">
+            <label for="profile-pic-input" class="edit-button">Editar</label>
+            <hr class="transparent-hr">
+            <hr class="transparent-hr">
+            <div class="detail">
+                <span class="label">Nombre</span>
+                <span id="name" class="value"></span>
+            </div>
+            <div class="detail">
+                <span class="label">Apellido</span>
+                <span id="lastname" class="value"></span>
+            </div>
+            <div class="detail">
+                <span class="label">Correo electrónico</span>
+                <span id="email" class="value"></span>
+            </div>
+            <div class="detail">
+                <span class="label">Bio</span>
+                <span id="bio" class="value"></span>
+            </div>
+            <button class="edit-button" onclick="openEditProfile()">Editar</button>
+        </div>
+    </div>
+
+    <div class="edit-profile-overlay" id="edit-profile-overlay">
+        <div class="edit-profile-modal">
+            <span class="close-button" onclick="closeEditProfile()">&times;</span>
+            <form id="edit-profile-form">
+                <div class="form-group">
+                    <label for="edit-name">Nombre:</label>
+                    <input type="text" id="edit-name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="edit-lastname">Apellido:</label>
+                    <input type="text" id="edit-lastname" name="lastname">
+                </div>
+                <div class="form-group">
+                    <label for="edit-email">Correo electrónico:</label>
+                    <input type="email" id="edit-email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="edit-bio">Bio:</label>
+                    <input type="text" id="edit-bio" name="bio">
+                </div>
+                <button type="submit">Guardar cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="favorites">
+        <h2 class="favorites-title">Favoritos</h2>
+        <div class="books" id="favorite-books-container">
+            <!-- Aquí se añadirán dinámicamente los libros favoritos -->
+        </div>
+        <a href="/Guardados/guardados.html" class="see-all">Ver Todos.</a>
+        <hr class="transparent-hr">
+        <hr class="transparent-hr">
+    </div>
+
+    <script src="/Perfil/perfil.js"></script>
+    <script src="/Perfil/oscuro.js"></script>
+</body>
+</html>

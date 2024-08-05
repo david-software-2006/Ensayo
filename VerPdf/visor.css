@@ -1,0 +1,230 @@
+/* Estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cccaca;
+}
+
+.pdf-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Ocupa toda la altura visible del viewport */
+    overflow: hidden;
+    /* Evita el desplazamiento lateral */
+}
+
+body.dark {
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
+
+body.dark .container {
+    background-color: #444444;
+}
+
+.toggle {
+    display: none;
+}
+
+
+.pdf-viewer {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    /* Permitir el desplazamiento vertical */
+    -webkit-overflow-scrolling: touch;
+    /* Scroll suave en dispositivos iOS */
+    text-align: center;
+}
+
+.pdf-viewer canvas {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    /* Para asegurar que las páginas no se desborden */
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #007BFF;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Estilos para los menús laterales */
+
+.left-menu,
+.right-menu {
+    position: fixed;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.60);
+    box-shadow: 0 0 10px rgba(97, 255, 5, 0.1);
+    padding: 20px;
+    z-index: 1001;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.left-menu.active,
+.right-menu.active {
+    transform: translateX(0);
+}
+
+.left-menu {
+    left: 0;
+}
+
+.close-button {
+    background-color: #fa4616;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.menu-button {
+    background-color: #fa4616;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #fa4616;
+}
+
+
+.boton-download {
+    border: none;
+    background-color: transparent;
+    align-content: center;
+    padding-left: 50px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.boton-download:hover {
+    color: #a5a5a5;
+}
+
+.img {
+    width: 120px;
+}
+
+iframe {
+    position: relative;
+    top: 40px;
+    margin-bottom: 40px;
+    border-radius:12px;
+    width: 100%;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input[type="password"] {
+    width: 100%;
+    padding-right: 30px; /* Espacio para el icono */
+    box-sizing: border-box;
+}
+
+.input-container .icon-eye {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.password-strength {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.password-strength.weak {
+    color: red;
+}
+
+.password-strength.moderate {
+    color: orange;
+}
+
+.password-strength.strong {
+    color: green;
+}
+
+
+
+/* Media query para pantallas pequeñas */
+
+@media only screen and (max-width: 600px) {
+
+    .left-menu,
+    .right-menu {
+        width: 100%;
+        /* Ocupa todo el ancho en pantallas pequeñas */
+        transform: translateX(-100%);
+    }
+
+    .pdf-viewer {
+        height: 100vh;
+        /* Ajusta la altura para ocupar toda la pantalla en dispositivos pequeños */
+    }
+
+    .menu-button {
+        z-index: 1001;
+        /* Asegura que los botones del menú estén sobre el visor de PDF */
+    }
+
+    .close-button {
+        top: 21px;
+        right: 60px;
+        z-index: 1004;
+    }
+
+    iframe {
+        width: auto;
+    }
+}

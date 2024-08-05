@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Recursos/Imagenes/favicon.webp" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="/Registro/registro.css">
+    <link rel="stylesheet" type="text/css" href="/Registro/registro1.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <div class="content">
+        <!--Formulario de escritorio-->
+        <div class="container">
+            <div class="regir">
+                <h1>Regístrate</h1>
+                <img src="/Recursos/Imagenes/pc.png" alt="Foto" class="foto">
+                <a href="/Login/login.html" class="button">Iniciar Sesión</a>
+            </div>
+            <div class="form-group">
+                <img class="img3" src="/Recursos/Imagenes/secretos.png" alt="Foto">
+                <form id="registerForm">
+                    <div class="input-icon">
+                        <div class="input-container">
+                            <i class='bx bx-user icon'></i>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                        </div>
+                        <div class="input-container">
+                            <i class='bx bx-user icon'></i>
+                            <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                        </div>
+                        <div class="input-container">
+                            <i class='bx bx-id-card icon'></i>
+                            <select id="tipo_documento" name="tipo_documento" required>
+                                <option value="">Tipo de documento</option>
+                                <option value="tarjeta_identidad">Tarjeta de Identidad</option>
+                                <option value="cedula_ciudadania">Cédula de Ciudadanía</option>
+                            </select>
+                        </div>
+                        <div class="input-container">
+                            <i class='bx bx-hash icon'></i>
+                            <input type="text" id="n_documento" name="n_documento" placeholder="Número de documento" required>
+                        </div>
+                        <div class="input-container">
+                            <i class='bx bx-envelope icon'></i>
+                            <input type="email" id="email" name="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="input-container">
+                            <i class='bx bx-lock icon'></i>
+                            <input type="password" id="password" name="password" placeholder="Contraseña mínimo 6 caracteres" required oninput="checkPasswordStrength()">
+                            <i class='bx bx-show icon-eye' onclick="togglePasswordVisibility('password', this)"></i> 
+                        </div>
+
+                        <div id="password-strength" class="password-strength"></div>                                      
+
+                        <div class="input-container">
+                            <i class='bx bx-lock icon'></i>
+                            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmar contraseña" required>
+                            <i class='bx bx-show icon-eye' onclick="togglePasswordVisibility('confirm_password', this)"></i>
+                        </div>
+                        <button class="boton" type="submit">Aceptar</button>
+                        <h3 class="or-separator">o</h3>
+                        <div class="social-buttons">
+                            <button class="buton google-button" type="button">
+                                <i class="bx bxl-google"></i><span>Iniciar con Google</span>
+                            </button>
+                            <button class="buton facebook-button" type="button">
+                                <i class='bx bxl-facebook'></i><span>Iniciar con Facebook</span>
+                            </button>
+                        </div>                    
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!--Formulario de móvil-->
+        <div class="login-container">
+            <div class="login-header">
+                <div class="logo-container">
+                    <img src="/Recursos/Imagenes/logo-blanco.webp" alt="Logo" class="logo">
+                    <h2>REGISTRO</h2>
+                </div>
+            </div>
+            <div class="login-avatar">
+                <img src="/Recursos/Imagenes/Registro.png" alt="Avatar">
+            </div>
+            <form class="login-form" id="registerFormMobile">
+                <div class="input-container">
+                    <i class='bx bx-user'></i>
+                    <input type="text" id="nombreMobile" name="nombre" placeholder="Nombre" required>
+                </div>
+                <div class="input-container">
+                    <i class='bx bx-user'></i>
+                    <input type="text" id="apellidoMobile" name="apellido" placeholder="Apellido" required>
+                </div>
+                <div class="input-container">
+                    <i class='bx bx-id-card'></i>
+                    <select id="tipo_documentoMobile" name="tipo_documento" required>
+                        <option value="">Tipo de documento</option>
+                        <option value="tarjeta_identidad">Tarjeta de Identidad</option>
+                        <option value="cedula_ciudadania">Cédula de Ciudadanía</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <i class='bx bx-hash'></i>
+                    <input type="text" id="n_documentoMobile" name="n_documento" placeholder="Número de documento" required>
+                </div>
+                <div class="input-container">
+                    <i class='bx bx-envelope'></i>
+                    <input type="email" id="emailMobile" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="input-container password-container">
+                    <i class='bx bx-lock icon'></i>
+                    <input type="password" id="passwordMobile" name="password" placeholder="Contraseña mínimo 6 caracteres" required oninput="checkPasswordStrength()">
+                    <i class='bx bx-show icon-eye' onclick="togglePasswordVisibility('passwordMobile', this)"></i>
+                </div>
+
+                <div id="password-strength-mobile" class="password-strength"></div>
+                      
+                <div class="input-container">
+                    <i class='bx bx-lock'></i>
+                    <input type="password" id="confirm_passwordMobile" name="confirm_password" placeholder="Confirmar contraseña" required>
+                    <i class='bx bx-show icon-eye' onclick="togglePasswordVisibility('confirm_passwordMobile', this)"></i>
+                </div>
+                <button type="submit" class="login-button">Aceptar</button>
+            </form>
+            <div class="login-footer">
+                <span class="or-separator">o</span>
+                <div class="social-buttons">
+                    <button class="or"><i class='bx bxl-google'></i>Iniciar con Google</button>
+                    <button class="or"><i class='bx bxl-facebook'></i>Iniciar con Facebook</button>
+                </div>
+                <div class="account-link">
+                    <a href="/Login/login.html">Ya tengo cuenta</a>
+                    <div class="line"></div> <!-- Línea debajo del enlace -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Registro/registro.js"></script>
+</body>
+
+</html>

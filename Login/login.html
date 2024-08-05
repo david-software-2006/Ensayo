@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Recursos/Imagenes/favicon.webp" type="image/x-icon">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/Login/style.css">
+    <link rel="stylesheet" href="/Login/login.css">
+    <link rel="stylesheet" href="/Login/recuperar.css">
+    <!-- Link a Boxicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+
+    <div class="container">
+        <div class="regir">
+            <h1>Iniciar Sesión</h1>
+            <img src="/Recursos/Imagenes/img1.png" alt="Foto">
+            <a href="/Registro/registro.html" class="button">Registrarse</a>
+        </div>
+        <div class="form-group">
+            <img class="img2" src="/Recursos/Imagenes/logo.png" alt="Foto">
+            <form id="loginForm" onsubmit="login(event)">
+                <div class="input-icon">
+                    <i class='bx bx-envelope icon'></i>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="input-icon">
+                    <i class='bx bx-lock iconD'></i>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <i class='bx bx-show iconD1' onclick="togglePasswordVisibility('password', this)"></i>
+                </div>
+                <button class="boton" type="submit">Iniciar Sesión</button>
+                <a href="/Login/recuperar.html" class="forgot-password">Recuperar contraseña</a>
+                <h3 class="or-separator">o</h3>
+                <div class="social-buttons">
+                    <button class="buton" type="button"><i class='bx bxl-google'></i>Iniciar con Google</button>
+                    <button class="buton" type="button"><i class='bx bxl-facebook'></i>Iniciar con Facebook</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Celular -->
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo-container">
+                <img src="/Recursos/Imagenes/logo1.webp" alt="Logo" class="logo">
+                <h2>LOGIN</h2>
+            </div>
+        </div>
+        <div class="login-avatar">
+            <img src="/Recursos/Imagenes/login.png" alt="Avatar">
+        </div>
+        <form class="login-form" id="loginFormMobile" onsubmit="login(event)">
+            <div class="input-container">
+                <i class='bx bx-envelope icon'></i>
+                <input type="email" id="emailMobile" placeholder="ejemplo@gmail.com" required>
+            </div>
+            <div class="input-container">
+                <i class='bx bx-lock icon'></i>
+                <input type="password" id="passwordMobile" placeholder="********" required>
+                <i class='bx bx-show iconD' onclick="togglePasswordVisibility('passwordMobile', this)"></i>
+            </div>
+            <button type="submit" class="login-button">Leer</button>
+        </form>
+        <div class="login-footer">
+            <span class="or-separator">o</span>
+            <div class="account-link">
+                <a href="/Registro/registro.html">Crear una cuenta</a>
+                <div class="line"></div> <!-- Línea debajo del enlace -->
+            </div>
+            <a href="/Login/recuperar.html" class="recover-password">Recuperar contraseña</a>
+        </div>
+    </div>
+
+
+    <script src="/Perfil/oscuro.js"></script>
+    <script src="/Login/guardar.js"></script>
+    <script>
+        // Aquí puedes agregar JavaScript si es necesario
+    </script>
+</body>
+
+</html>

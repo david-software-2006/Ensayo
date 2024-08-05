@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Recursos/Imagenes/favicon.webp" type="image/x-icon">
+    <title>Libros</title>
+    <link rel="stylesheet" href="/Libros/libro.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://kit.fontawesome.com/be6261ecc3.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <label for="toggle" id="label_toggle" class="label_toggle"><i class="fa-solid fa-toggle-off"></i></label>
+    <input type="checkbox" id="toggle" class="toggle">
+
+    <!--Header-->
+    <header>
+        <!--Barra azul-->
+        <div class="header__barra--azul"></div>
+        <!--Nav-->
+        <div class="nav container1">
+            <!--Logo-->
+            <a href="/principal.html" class="logo"><img src="/Recursos/Imagenes/SPC_Horizontal_Color.png" alt="Secretos para contar 20 años"></a>
+            <a href="/principal.html" class="logo1"><img src="/Recursos/Imagenes/20-blanco.png" alt="Secretos para contar 20 años"></a>
+
+            <!--Search Box-->
+            <div class="search-box">
+                <input class="search" type="search" name="search" id="search-input" placeholder="Buscar libros">
+                <i class='bx bx-search'></i>
+            </div>
+
+            <!--User-->
+            <a href="/Perfil/Perfil.html" class="user">
+
+                <img src="/Recursos/Imagenes/usuario.png" alt="user" class="user-img">
+
+            </a>
+
+            <!--Nav Bar-->
+            <div class="navbar">
+                <a href="/principal.html" class="nav-link nav-active">
+                    <i class='bx bx-home'></i>
+                    <span class="nav-link-title">Principal</span>
+                </a>
+
+                <a href="/Perfil/perfil.html" class="nav-link">
+                    <i class='bx bx-user-circle'></i>
+                    <span class="nav-link-title">Perfil</span>
+                </a>
+
+                <!-- <a href="#movies" class="nav-link">
+                    <i class='bx bx-compass'></i>
+                    <span class="nav-link-title">Explore</span>
+                </a> -->
+
+                <a href="/Indice/indice.html" class="nav-link">
+                    <i class='bx bx-list-ul'></i>
+                    <span class="nav-link-title">Indice</span>
+                </a>
+
+
+                <a href="/Libros/libro.html" class="nav-link">
+                    <i class='bx bx-book-bookmark'></i>
+                    <span class="nav-link-title">Libros</span>
+                </a>
+
+                <a href="/Guardados/guardados.html" class="nav-link">
+                    <i class='bx bxs-save'></i>
+                    <span class="nav-link-title">Guardados</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="section-title">LIBROS</h1>
+        <div class="category">
+            <div class="scrollable-container">
+                <div id="listalibros"></div>
+            </div>
+        </div>
+        <div id="search-results" class="search-results hidden"></div>
+    </div>
+    
+    
+    <!-- <div class="container">
+        <h1 class="section-title">LIBROS</h1>
+        <div class="category">
+            <div class="heading">
+            <h2 class="category-title">PARA EL CAMPO</h2>
+        </div>
+            <div class="products">
+                <div class="product-card">
+                    <div class="book">
+                        <p class="product-name">Lectura para todos los días</p>
+                        <img src="/Recursos/Imagenes/libro.webp" alt="Product Image" class="product-image"><br>
+                        <div class="iconos">
+                            <i class='bx bx-heart' onclick="saveBook('Lectura para todos los días', '/Recursos/Imagenes/libro.webp', 'pdf/lectura.pdf')"></i>
+                            <i class='bx bx-star' onclick="addToProfile('Lectura para todos los días', '/Recursos/Imagenes/libro.webp', 'pdf/lectura.pdf')"></i>
+                        </div>
+                        <button class="boton" type="button" onclick="openPDF('pdf/lectura.pdf', 'lectura')"> Leer <i class='bx bx-book-reader'></i></button>
+                    </div>
+                </div> 
+                <div class="product-card">
+                    <div class="book">
+                        <p class="product-name">La casa y el campo</p>
+                        <img src="/Recursos/Imagenes/libro1.webp" alt="Product Image" class="product-image"><br>
+                        <div class="iconos">
+                            <i class='bx bx-heart' onclick="saveBook('La casa y el campo', '/Recursos/Imagenes/libro1.webp', 'pdf/lectura.pdf')"></i>
+                            <i class='bx bx-star' onclick="addToProfile('La casa y el campo', '/Recursos/Imagenes/libro1.webp', 'pdf/lectura.pdf')"></i>
+                        </div>
+                        <button class="boton" type="button" onclick="openPDF('pdf/casa_campo.pdf', 'casa_campo')"> Leer <i class='bx bx-book-reader'></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="book">
+                        <p class="product-name">Historias y lugares</p>
+                        <img src="/Recursos/Imagenes/libro2.webp" alt="Product Image" class="product-image"><br>
+                        <div class="iconos">
+                            <i class='bx bx-heart' onclick="saveBook('Historias y lugares', '/Recursos/Imagenes/libro2.webp', 'pdf/lectura.pdf')"></i>
+                            <i class='bx bx-star' onclick="addToProfile('Historias y lugares', '/Recursos/Imagenes/libro2.webp', 'pdf/lectura.pdf')"></i>
+                        </div>
+                        <button class="boton" type="button" onclick="openPDF('pdf/historias_lugares.pdf', 'historias_lugares')"> Leer <i class='bx bx-book-reader'></i></button>
+                    </div>
+                </div> -->
+                <!-- Añadir más tarjetas si es necesario -->
+            <!-- </div>
+        </div> -->
+
+        <!-- <div class="category">
+            <div class="heading">
+            <h2 class="category-title">EN FAMILIA</h2>
+        </div>
+            <div class="products">
+                <div class="product-card">
+                    <div class="book">
+                        <p class="product-name">Cuentos maravillosos</p>
+                        <img src="/Recursos/Imagenes/libro3.webp" alt="Product Image" class="product-image"><br>
+                        <div class="iconos">
+                            <i class='bx bx-heart' onclick="saveBook('Cuentos maravillosos', '/Recursos/Imagenes/libro3.webp', 'pdf/lectura.pdf')"></i>
+                            <i class='bx bx-star' onclick="addToProfile('Cuentos maravillosos', '/Recursos/Imagenes/libro3.webp', 'pdf/lectura.pdf')"></i>
+                        </div>
+                        <button class="boton" type="button" onclick="openPDF('/LionsProject/Recursos/Pdfs/lectura.pdf', 'product1')"> Leer <i class='bx bx-book-reader'></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="book">
+                        <p class="product-name">Los viajes del viejo Jacobo</p>
+                        <img src="/Recursos/Imagenes/libro4.webp" alt="Product Image" class="product-image"><br>
+                        <div class="iconos">
+                            <i class='bx bx-heart' onclick="saveBook('Los viajes del viejo Jacobo', '/Recursos/Imagenes/libro4.webp', 'pdf/lectura.pdf')"></i>
+                            <i class='bx bx-star' onclick="addToProfile('Los viajes del viejo Jacobo', '/Recursos/Imagenes/libro4.webp', 'pdf/lectura.pdf')"></i>
+                        </div>
+                        <button class="boton" type="button" onclick="openPDF('/Recursos/Pdfs/lectura.pdf', 'product2')"> Leer <i class='bx bx-book-reader'></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="book">
+                        <p class="product-name">Más claro no canta un gallo</p>
+                        <img src="/Recursos/Imagenes/libro5.webp" alt="Product Image" class="product-image"><br>
+                        <div class="iconos">
+                            <i class='bx bx-heart' onclick="saveBook('Más claro no canta un gallo ', '/Recursos/Imagenes/libro5.webp', 'pdf/lectura.pdf')"></i>
+                            <i class='bx bx-star' onclick="addToProfile('Más claro no canta un gallo', '/Recursos/Imagenes/libro5.webp', 'pdf/lectura.pdf')"></i>
+                        </div>
+                        <button class="boton" type="button" onclick="openPDF('Recursos/Pdfs/lectura.pdf', 'product3')"> Leer <i class='bx bx-book-reader'></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <div class="heading">
+            <h2 class="category-title">EN FAMILIA</h2>
+        </div>
+            <div class="products">
+                <div class="product-card">
+                    <div class="book">
+                        <p class="product-name">La Tierra, el cielo y más allá</p>
+                        <img src="/Recursos/Imagenes/libro6.webp" alt="Product Image" class="product-image"><br>
+                        <div class="iconos">
+                            <i class='bx bx-heart' onclick="saveBook('La Tierra, el cielo y más allá', '/Recursos/Imagenes/libro6.webp', 'pdf/lectura.pdf')"></i>
+                            <i class='bx bx-star' onclick="addToProfile('La Tierra, el cielo y más allá', '/Recursos/Imagenes/libro6.webp', 'pdf/lectura.pdf')"></i>
+                        </div>
+                        <button class="boton" type="button" onclick="openPDF('Recursos/Pdfs/lectura.pdf', 'product4')"> Leer <i class='bx bx-book-reader'></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="book">
+                        <p class="product-name">Cuentos para desenredar enredos</p>
+                        <img src="/Recursos/Imagenes/libro7.webp" alt="Product Image" class="product-image"><br>
+                        <div class="iconos">
+                            <i class='bx bx-heart' onclick="saveBook('Cuentos para desenredar enredos', '/Recursos/Imagenes/libro7.webp', 'pdf/lectura.pdf')"></i>
+                            <i class='bx bx-star' onclick="addToProfile('Cuentos para desenredar enredos', '/Recursos/Imagenes/libro7.webp', 'pdf/lectura.pdf')"></i>
+                        </div>
+                        <button class="boton" type="button" onclick="openPDF('/Recursos/Pdfs/lectura.pdf', 'product5')"> Leer <i class='bx bx-book-reader'></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="book">
+                        <p class="product-name">Todo lo contario</p>
+                        <img src="/Recursos/Imagenes/libro8.webp" alt="Product Image" class="product-image"><br>
+                        <div class="iconos">
+                            <i class='bx bx-heart' onclick="saveBook('Todo lo contario', '/Recursos/Imagenes/libro8.webp', 'pdf/lectura.pdf')"></i>
+                            <i class='bx bx-star' onclick="addToProfile('Todo lo contrario', '/Recursos/Imagenes/libro8.webp', 'pdf/lectura.pdf')"></i>
+                        </div>
+                        <button class="boton" type="button" onclick="openPDF('Recursos/Pdfs/lectura.pdf', 'product6')"> Leer <i class='bx bx-book-reader'></i></button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Añadir más tarjetas si es necesario -->
+    <!-- </div> -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>Contáctenos</p>
+                <a href="mailto:info@secretosparacontar.org">info@secretosparacontar.org</a>
+                <p>Tel: (57) 604 322 06 90</p>
+                <p>Trabaja con nosotros</p>
+                <p>Calle 11A #43B - 41, Barrio Manila, Medellín, Colombia</p>
+            </div>
+            <div class="footer-right">
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/secretosparacontar?mibextid=ZbWKwL" target="_blank"><i
+                                class='bx bxl-facebook-circle'></i></a></li>
+                    <li><a href="https://www.instagram.com/secretosparacontar?igsh=emE1MGUyZ2dpMXl0" target="_blank"><i
+                                class='bx bxl-instagram'></i></a></li>
+                    <li><a href="mailto:secretosparacontar@gmail.com" target="_blank"><i class='bx bx-envelope'></i></a>
+                    </li>
+                    <li><a href="https://wa.me/+576043220690" target="_blank"><i class='bx bxl-whatsapp'></i></a></li>
+                    <li><a href="https://www.youtube.com/c/FundaciónSecretosparaContar" target="_blank"><i
+                                class='bx bxl-youtube'></i></a></li>
+                    <li><img src="/Recursos/Imagenes/lions.png" alt="lions" class="lions"></li>
+                </ul>
+                <div class="footer-logo">
+                    <img src="/Recursos/Imagenes/logo-blanco.webp" alt="Logo blanco" class="logo__blanco">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Política de privacidad y protección de datos personales</p>
+            <p>© Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="/Libros/libro.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/Perfil/oscuro.js"></script>
+
+</body>
+</html>

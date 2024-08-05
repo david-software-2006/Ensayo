@@ -1,0 +1,285 @@
+/* Estilos comunes para el cuerpo de la página */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Recursos/Imagenes/fondo_registro.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 1;
+}
+
+.background-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+}
+
+
+/* Estilo para el contenedor de registro */
+.regir {
+    width: 400px;
+    background: linear-gradient(to bottom, #5F8DB5, #4285F4);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
+    box-shadow: inset -10px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el título del contenedor de registro */
+.regir h1 {
+    color: #ffffff;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las imágenes del contenedor de registro */
+.regir img {
+    width: 325px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el botón de registro */
+.regir .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #002748;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.regir .button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el contenedor del formulario */
+.form-group {
+    width: 470px;
+    background: linear-gradient(to bottom, #5F8DB5, #4285F4);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 13px;
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los campos de entrada del formulario */
+.input-icon {
+    position: relative;
+    margin: 33px 0;
+}
+
+.input-icon input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border-radius: 15px;
+    border: none;
+    display: flex;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.input-icon .icon,
+.input-icon .iconD {
+    position: absolute;
+    font-size: 20px;
+    color: #000000;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-icon .icon {
+    left: 10px;
+}
+
+.input-icon .iconD {
+    left: 10px;
+}
+
+.img2 {
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -16px;
+}
+
+/* Estilos para los botones */
+.boton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fa4616;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 250px;
+    display: block;
+    margin: 20px auto;
+}
+
+.boton:hover {
+    background-color: #b35100;
+}
+
+.buton {
+    padding: 10px 27px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto;
+}
+
+.buton:hover {
+    background-color: #fa4616;
+}
+
+/* Estilos para los enlaces de recuperación de contraseña */
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    color: white;
+    text-decoration: underline;
+}
+
+.forgot-password:visited {
+    color: white;
+}
+
+/* Estilos para la separación de los botones sociales */
+.or-separator {
+    margin: 20px 0;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+}
+
+.or-separator::before,
+.or-separator::after {
+    content: '';
+    position: absolute;
+    top: 65%;
+    width: 45%;
+    height: 1px;
+    background-color: #ffffff;
+}
+
+.or-separator::before {
+    left: 0;
+}
+
+.or-separator::after {
+    right: 0;
+}
+
+/* Estilos para los botones sociales */
+.social-buttons {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    justify-content: center; /* Alinear horizontalmente al centro */
+}
+
+.social-buttons .buton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buton:hover {
+    background-color: #FF714B;
+    color: #ffffff;
+}
+
+.social-buttons .buton i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.bxl-google {
+    font-size: 20px;
+}
+
+.bxl-facebook {
+    color: #3b5998; /* Azul de Facebook */
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.input-icon, .input-container {
+    position: relative;
+}
+
+
+
+.iconD1, .icon-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+
+/* Media queries para ocultar elementos según el ancho de la pantalla */
+@media (max-width: 768px) {
+    .container {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .login-container {
+        display: none;
+    }
+}

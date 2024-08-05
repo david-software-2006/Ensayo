@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="/Login/recuperar.css">
+</head>
+<body>
+    <div class="cont">
+        <div class="box">
+            <div class="header">
+                <h2 class="title">Recupera tu contraseña</h2><br>
+                <p class="subtitle">
+                    Ingrese su dirección de correo electrónico y le enviaremos un enlace para restablecer su contraseña.
+                </p>
+            </div>
+            <div class="content">
+                <!-- Formulario para ingresar el correo electrónico -->
+                <form action="/ruta-al-servidor" method="POST" class="form">
+                    <div class="input-group">
+                        <label for="email" class="label">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required placeholder="Ingrese su correo electrónico" class="input">
+                    </div>
+                    <button type="submit" class="btn shadow-orange">
+                        Enviar enlace de restablecimiento
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/Perfil/oscuro.js"></script>
+    <script src="/Login/recuperar.js"></script>
+</body>
+</html>
